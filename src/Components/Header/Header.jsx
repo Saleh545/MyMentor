@@ -1,15 +1,31 @@
-import React from 'react'
+import React from "react";
+import icon from "../../../public/Images/MyMentor.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div>
-     <header>
-      <div className="container">
-        
-      </div>
-     </header>
-    </div>
-  )
-}
+      <header>
+        <div className="container">
+          <div className="header">
+            <div className="left">
 
-export default Header
+              <div className="left-img"><img  src={icon} alt="icon" /></div>
+              <span className="icon-text">MyMentor Internship & Development Agency</span>
+            </div>
+
+            
+            <div className="navbar">
+              <Link to="#" >Ana səhifə</Link>
+              <Link to="#">Marafonlar</Link>
+              <Link to="#">Haqqımızda</Link>
+              <Link to="#">Müraciət et</Link>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
+};
+
+export default Header;

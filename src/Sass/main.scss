@@ -8,6 +8,8 @@
 
 /* ------------------------------- Pages Start ------------------------------ */
 
-
 // home page
-@import "./pages/Home/home.scss"
+@import "./pages/Home/home.scss";
+
+//components
+@import "./components/header/header.scss"
