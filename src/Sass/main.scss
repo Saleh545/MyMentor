@@ -1,0 +1,13 @@
+// base settings
+@import "./base.scss";
+
+// variables
+@import "./Utils/variable.scss";
+
+
+
+/* ------------------------------- Pages Start ------------------------------ */
+
+
+// home page
+@import "./pages/Home/home.scss"
