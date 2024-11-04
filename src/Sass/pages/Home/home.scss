@@ -1,0 +1,78 @@
+.main {
+  background-color: $darkBlue !important  ;
+  height: 73vh;
+
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 73vh;
+
+    .main-left {
+      width: 45%;
+
+      h1 {
+        font-weight: 700;
+        font-style: normal;
+        color: rgb(255, 255, 255);
+        font-kerning: none;
+        text-decoration: none;
+        font-size: 53px;
+      }
+      p {
+        font-weight: 700;
+        font-style: normal;
+        color: rgb(255, 255, 255);
+        font-kerning: none;
+        text-decoration: none;
+        font-size: 26px;
+        margin-top: 30px;
+      }
+    }
+    .main-right {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .main-box {
+        border: 3px solid #ffffff;
+        border-radius: 50px;
+        transform: rotate(6.76deg);
+        img{
+            border-radius: 50px;
+
+        }
+        .main-text {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 20px 0 0 20px;
+          .mymentor {
+            font-size: 40px;
+            color: #fff;
+          }
+          .career{
+            font-size: 29px;
+            color: #fff;
+          }
+          .remote{
+            margin-top: 110px;
+            color: #fff;
+            font-size: 19px;
+          }
+          .hour{
+            color: #fff;
+            font-size: 19px;
+            margin-top: 5px;
+          }
+          span{
+            color: #fff;
+            margin-top: 15px;
+            font-size: 25px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
