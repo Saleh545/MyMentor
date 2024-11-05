@@ -4,7 +4,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 0;
+    padding: 25px 15px;
     .left {
         display: flex;
         flex-direction: column;
@@ -34,6 +34,11 @@ header {
         display: flex;
         align-items: center;
         gap: 35px;
+        @media (max-width: 576px) {
+flex-direction: column;        
+display: none;
+        }
+                  
         a{
             color: $white;
             font-weight: 700;

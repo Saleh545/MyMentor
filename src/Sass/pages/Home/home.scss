@@ -1,75 +1,237 @@
 .main {
-  background-color: $darkBlue !important  ;
   height: 73vh;
-
-  .main-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 73vh;
-
-    .main-left {
-      width: 45%;
-
-      h1 {
-        font-weight: 700;
-        font-style: normal;
-        color: rgb(255, 255, 255);
-        font-kerning: none;
-        text-decoration: none;
-        font-size: 53px;
+  .main-menu {
+    background-color: $darkBlue !important  ;
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 73vh;
+      padding: 0 15px;
+      @media (max-width: 576px) {
+        flex-direction: column;
+        padding: 30px 15px;
       }
-      p {
-        font-weight: 700;
-        font-style: normal;
-        color: rgb(255, 255, 255);
-        font-kerning: none;
-        text-decoration: none;
-        font-size: 26px;
-        margin-top: 30px;
+      .main-left {
+        width: 45%;
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+        h1 {
+          font-weight: 700;
+          font-style: normal;
+          color: rgb(255, 255, 255);
+          font-kerning: none;
+          text-decoration: none;
+          font-size: 53px;
+          @media (max-width: 576px) {
+            font-size: 39px;
+            text-align: center;
+          }
+        }
+        p {
+          font-weight: 700;
+          font-style: normal;
+          color: rgb(255, 255, 255);
+          font-kerning: none;
+          text-decoration: none;
+          font-size: 26px;
+          margin-top: 30px;
+          @media (max-width: 576px) {
+            font-size: 20px;
+          }
+        }
+      }
+      .main-right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .main-box {
+          border: 3px solid #ffffff;
+          border-radius: 50px;
+          transform: rotate(6.76deg);
+          @media (max-width: 576px) {
+            transform: rotate(0);
+          }
+          img {
+            border-radius: 50px;
+          }
+          .main-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 20px 0 0 20px;
+            .mymentor {
+              font-size: 40px;
+              color: #fff;
+            }
+            .career {
+              font-size: 29px;
+              color: #fff;
+            }
+            .remote {
+              margin-top: 110px;
+              color: #fff;
+              font-size: 19px;
+            }
+            .hour {
+              color: #fff;
+              font-size: 19px;
+              margin-top: 5px;
+            }
+            span {
+              color: #fff;
+              margin-top: 15px;
+              font-size: 25px;
+              display: inline-block;
+            }
+          }
+        }
       }
     }
-    .main-right {
-      position: relative;
+  }
+  .numbers-section {
+    padding: 0 15px;
+    margin: 90px 0;
+    .numbers {
+      display: flex;
+      @media (max-width: 576px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+      .number {
+        padding: 20px 40px;
+        background-color: $darkBlue;
+        border-radius: 40px;
+        text-align: center;
+        h4 {
+          color: #fff;
+          font-size: 50px;
+          font-weight: 700;
+          @media (max-width: 576px) {
+font-size: 38px;          }
+        }
+        p {
+          color: #fff;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          font-size: 26px;
+          font-weight: 700;
+          @media (max-width: 576px) {
+            font-size: 20px;          }
+                    
+
+        }
+      }
+    }
+  }
+  .marathon-section {
+    background-color: $darkBlue;
+    padding: 90px 15px;
+    text-align: center;
+    .marathon {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      .main-box {
-        border: 3px solid #ffffff;
-        border-radius: 50px;
-        transform: rotate(6.76deg);
-        img{
-            border-radius: 50px;
-
+      align-items: center;
+      h2 {
+        color: #fff;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+        font-size: 53px;
+        @media (max-width: 576px) {
+          font-size: 35px;          }
+                  
+      }
+      .marathon-card {
+        @media (max-width: 576px) {
+          flex-wrap: wrap;
+          width: 100%;
         }
-        .main-text {
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: 20px 0 0 20px;
-          .mymentor {
-            font-size: 40px;
-            color: #fff;
-          }
-          .career{
-            font-size: 29px;
-            color: #fff;
-          }
-          .remote{
-            margin-top: 110px;
-            color: #fff;
-            font-size: 19px;
-          }
-          .hour{
-            color: #fff;
-            font-size: 19px;
-            margin-top: 5px;
-          }
-          span{
-            color: #fff;
-            margin-top: 15px;
+        column-gap: 30px;
+        border: 4px solid #fff;
+        margin-top: 50px;
+        border-radius: 33px;
+        padding: 20px 10px;
+        width: 58%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          color: #fff;
+          font-size: 40px;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+          margin-left: 15px;
+          text-align: left;
+          width: 50%;
+          @media (max-width: 576px) {
             font-size: 25px;
-            display: inline-block;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+        p {
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+          color: #fff;
+          font-size: 18px;
+          width: 71%;
+          text-align: left;
+          font-weight: 700;
+          @media (max-width: 576px) {
+            width: 100%;
+          }
+        }
+      }
+      @media (max-width: 576px) {
+        .marathon-card-white {
+          flex-wrap: wrap;
+        }
+      }
+      .marathon-card-white {
+        border-radius: 33px;
+        column-gap: 30px;
+        margin-top: 50px;
+        padding: 20px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        width: 58%;
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+        h1 {
+          text-align: left;
+          color: $darkBlue;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+          font-size: 40px;
+          width: 50%;
+          margin-left: 15px;
+          @media (max-width: 576px) {
+            font-size: 25px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-left: 0;
+          }
+        }
+        p {
+          font-size: 18px;
+          color: $darkBlue;
+          text-align: left;
+          width: 71%;
+          font-weight: 700;
+          @media (max-width: 576px) {
+            width: 100%;
+            line-height: 1.4;
+            font-size: 15px;
           }
         }
       }
