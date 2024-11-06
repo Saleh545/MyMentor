@@ -1,3 +1,4 @@
+
 .main {
   height: 73vh;
   .main-menu {
@@ -23,6 +24,8 @@
           color: rgb(255, 255, 255);
           font-kerning: none;
           text-decoration: none;
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+
           font-size: 53px;
           @media (max-width: 576px) {
             font-size: 39px;
@@ -114,7 +117,8 @@
           font-size: 50px;
           font-weight: 700;
           @media (max-width: 576px) {
-font-size: 38px;          }
+            font-size: 38px;
+          }
         }
         p {
           color: #fff;
@@ -123,9 +127,8 @@ font-size: 38px;          }
           font-size: 26px;
           font-weight: 700;
           @media (max-width: 576px) {
-            font-size: 20px;          }
-                    
-
+            font-size: 20px;
+          }
         }
       }
     }
@@ -144,8 +147,8 @@ font-size: 38px;          }
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
         font-size: 53px;
         @media (max-width: 576px) {
-          font-size: 35px;          }
-                  
+          font-size: 35px;
+        }
       }
       .marathon-card {
         @media (max-width: 576px) {
@@ -235,6 +238,100 @@ font-size: 38px;          }
           }
         }
       }
+    }
+  }
+  .about-section {
+    background-color: $darkBlue;
+    .about {
+      text-align: center;
+      h2 {
+        font-size: 53px;
+        color: #fff;
+        font-weight: 700;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+        @media (max-width: 576px) {
+          font-size: 38px;
+        }
+      }
+      .about-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 60px;
+        @media (max-width: 576px) {
+          flex-direction: column;
+          padding: 0 15px;
+        }
+        .about-left {
+          width: 50%;
+          @media (max-width: 576px) {
+            width: 100%;
+          }
+
+          p {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+            color: #fff;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 700;
+            @media (max-width: 576px) {
+              font-size: 17px;
+            }
+          }
+        }
+        .about-right {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          .about-img {
+            width: 90px;
+            height: 90px;
+            @media (max-width: 576px) {
+              margin-top: 20px;
+            }
+            img {
+              width: 100%;
+            }
+          }
+          p {
+            color: #fff;
+            font-size: 20px;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+            font-weight: 700;
+          }
+        }
+      }
+      .about-flags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 100px;
+        .flag-img {
+          width: 115px;
+          height: 67px;
+          margin: 10px 0;
+          img {
+            width: 100%;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+  .questions-section {
+    margin-top: 80px;
+    .questions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     .accordion{
+      width: 50%;
+      .accordion-item{
+        border: 3px solid $darkBlue;
+        margin-bottom: 20px;
+      }
+     }
     }
   }
 }

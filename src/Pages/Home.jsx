@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "../Components/Header/Header";
 import mainImage from "../../public/Images/MainImage.png";
+import icon from "../../public/Images/MyMentor.jpg";
+import { Accordion } from "react-bootstrap";
+
 const Home = () => {
   return (
     <div>
@@ -91,6 +94,107 @@ const Home = () => {
                   və məmnun edici bir təcrübə yaratmaqdır.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="about-section">
+          <div className="container">
+            <div className="about">
+              <h2>Haqqımızda</h2>
+
+              <div className="about-flex">
+                <div className="about-left">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Neque porro recusandae cum quia aliquam quas magni
+                    reprehenderit mollitia incidunt iusto, saepe laboriosam
+                    autem assumenda minima nam iure veniam tempora labore. Neque
+                    inventore optio quasi libero possimus nesciunt obcaecati
+                    praesentium excepturi aliquam suscipit quos beatae nulla
+                    accusamus velit numquam dolore ipsum eius, quibusdam,
+                    quisquam ullam aut. Ad distinctio dicta nemo voluptates eos
+                    dolorum, odit iste veniam. Perferendis, ex! Et, quam fugiat
+                    ducimus ipsam obcaecati hic facere, exercitationem
+                  </p>
+                </div>
+                <div className="about-right">
+                  <div className="about-img">
+                    <img src={icon} alt="" />
+                  </div>
+                  <p>
+                    MyMentor Internship &<br /> Development Agency
+                  </p>
+                </div>
+              </div>
+              <div className="about-flags">
+                <div className="flag-img">
+                  <img
+                    src="https://media-public.canva.com/aZIQA/MAEEUuaZIQA/1/t.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="flag-img">
+                  <img
+                    src="https://media-public.canva.com/jo8eo/MAEErEjo8eo/1/t.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="flag-img">
+                  <img
+                    src="https://media-public.canva.com/EGep4/MAEE5ZEGep4/1/t.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="flag-img">
+                  <img
+                    src="https://media-public.canva.com/MADBrU7ZTEM/1/thumbnail-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="flag-img">
+                  <img
+                    src="https://media-public.canva.com/MAC70Ixyhto/1/thumbnail-1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="questions-section">
+          <div className="container">
+            <div className="questions">
+<h1>Tez-Tez verilən suallar</h1>
+
+            <Accordion>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Marafonlar kimlər üçündür?</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+
+
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Accordion Item #2</Accordion.Header>
+        <Accordion.Body>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
             </div>
           </div>
         </div>
