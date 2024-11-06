@@ -73,7 +73,7 @@
               color: #fff;
             }
             .remote {
-              margin-top: 110px;
+              margin-top: 25px;
               color: #fff;
               font-size: 19px;
             }
@@ -95,7 +95,7 @@
   }
   .numbers-section {
     padding: 0 15px;
-    margin: 90px 0;
+    margin: 90px 0 !important;
     .numbers {
       display: flex;
       @media (max-width: 576px) {
@@ -149,20 +149,20 @@
           font-size: 35px;
         }
       }
-      .marathon-card {
-        @media (max-width: 576px) {
-          flex-wrap: wrap;
-          width: 100%;
-        }
-        column-gap: 30px;
-        border: 4px solid #fff;
-        margin-top: 50px;
-        border-radius: 33px;
-        padding: 20px 10px;
-        width: 58%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .marathon-card {
+          @media (max-width: 576px) {
+            flex-wrap: wrap;
+            width: 100%;
+          }
+          column-gap: 30px;
+          border: 4px solid #fff;
+          margin-top: 50px;
+          border-radius: 33px;
+          padding: 20px 25px;
+          width: 58%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
         h1 {
           color: #fff;
@@ -182,7 +182,7 @@
         p {
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
           color: #fff;
-          font-size: 18px;
+          font-size: 17px;
           width: 71%;
           text-align: left;
           font-weight: 700;
@@ -200,12 +200,15 @@
         border-radius: 33px;
         column-gap: 30px;
         margin-top: 50px;
-        padding: 20px 10px;
+        padding: 20px 25px;
+        border: 4px solid #fff;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: #fff;
         width: 58%;
+        overflow-y: auto;
+
         @media (max-width: 576px) {
           width: 100%;
         }
@@ -215,7 +218,6 @@
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
           font-size: 40px;
           width: 50%;
-          margin-left: 15px;
           @media (max-width: 576px) {
             font-size: 25px;
             width: 100%;
@@ -225,11 +227,12 @@
           }
         }
         p {
-          font-size: 18px;
+          font-size: 17px;
           color: $darkBlue;
           text-align: left;
-          width: 71%;
+          width: 68%;
           font-weight: 700;
+          text-wrap: wrap;
           @media (max-width: 576px) {
             width: 100%;
             line-height: 1.4;
@@ -339,7 +342,7 @@
         }
         .accordion-item {
           border: 3px solid $darkBlue;
-          margin-bottom: 20px;
+          margin-bottom: 20px !important;
           border-radius: 20px;
           button {
             border-radius: 20px !important;

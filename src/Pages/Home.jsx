@@ -60,7 +60,7 @@ const Home = () => {
                 <p>
                   Data Science, böyük həcmdə məlumatları toplamaq,
                   təmizləmək,təhlil etmək və onlardan dəyərli məlumatlar
-                  çıxarmaq üçünstatistika, proqramlaşdırma və maşın öyrənməsini
+                  çıxarmaq üçün statistika, proqramlaşdırma və maşın öyrənməsini
                   birləşdirən bir sahədir. Məqsəd, proqnozlar vermək və
                   məlumatlara əsaslanan qərarları dəstəkləməkdir.
                 </p>
