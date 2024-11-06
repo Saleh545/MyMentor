@@ -1,5 +1,4 @@
 .main {
-  height: 73vh;
   .main-menu {
     background-color: $darkBlue !important  ;
     .main-content {
@@ -73,7 +72,7 @@
               color: #fff;
             }
             .remote {
-              margin-top: 25px;
+              margin-top: 77px;
               color: #fff;
               font-size: 19px;
             }
@@ -149,32 +148,31 @@
           font-size: 35px;
         }
       }
-        .marathon-card {
-          @media (max-width: 576px) {
-            flex-wrap: wrap;
-            width: 100%;
-          }
-          column-gap: 30px;
-          border: 4px solid #fff;
-          margin-top: 50px;
-          border-radius: 33px;
-          padding: 20px 25px;
-          width: 58%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+      .marathon-card {
+        @media (max-width: 576px) {
+          flex-wrap: wrap;
+          width: 100%;
+        }
+        column-gap: 30px;
+        border: 4px solid #fff;
+        margin-top: 50px;
+        border-radius: 33px;
+        padding: 20px 25px;
+        width: 58%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         h1 {
           color: #fff;
           font-size: 40px;
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
-          margin-left: 15px;
           text-align: left;
           width: 50%;
           @media (max-width: 576px) {
             font-size: 25px;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 10px !important;
             margin-left: 0;
             width: 100%;
           }
@@ -222,7 +220,7 @@
             font-size: 25px;
             width: 100%;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 10px !important;
             margin-left: 0;
           }
         }
@@ -230,8 +228,9 @@
           font-size: 17px;
           color: $darkBlue;
           text-align: left;
-          width: 68%;
+          width: 71%;
           font-weight: 700;
+          word-spacing: -1.5px;
           text-wrap: wrap;
           @media (max-width: 576px) {
             width: 100%;
@@ -335,7 +334,8 @@
         }
       }
       .accordion {
-        width: 50%;
+        padding: 0 15px;
+        width: 90%;
         margin-top: 30px;
         @media (max-width: 576px) {
           width: 100%;
@@ -346,6 +346,21 @@
           border-radius: 20px;
           button {
             border-radius: 20px !important;
+            font-size: 23px;
+            font-weight: 700;
+            color: $darkBlue !important;
+            @media (max-width: 576px) {
+              font-size: 17px;
+            }
+            &:not(.collapsed) {
+              background-color: transparent !important;
+            }
+            &:focus {
+              box-shadow: none !important;
+            }
+          }
+          .accordion-body {
+            padding-top: 0 !important;
           }
         }
       }

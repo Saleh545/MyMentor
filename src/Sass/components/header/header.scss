@@ -6,13 +6,16 @@ header {
     justify-content: space-between;
     padding: 25px 15px;
     .left {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;  
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       .left-img {
         width: 102px;
         height: 102px;
         margin-left: 18px;
+        @media (max-width: 576px) {
+          width: 80px;
+        }
 
         img {
           width: 100%;
@@ -27,23 +30,25 @@ header {
         font-size: 13px;
         line-height: 18px;
         text-align: center;
-      }
-      
-    }
-    .navbar{
-        display: flex;
-        align-items: center;
-        gap: 35px;
         @media (max-width: 576px) {
-flex-direction: column;        
-display: none;
+          font-size: 12px;
         }
-                  
-        a{
-            color: $white;
-            font-weight: 700;
-            font-size: 18px;
-        }
+      }
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      @media (max-width: 576px) {
+        flex-direction: column;
+        display: none;
+      }
+
+      a {
+        color: $white;
+        font-weight: 700;
+        font-size: 18px;
+      }
     }
   }
 }
