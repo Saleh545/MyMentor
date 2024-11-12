@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Components/Header/Header";
 import mainImage from "../../public/Images/MainImage.png";
 import icon from "../../public/Images/MyMentor.jpg";
@@ -6,6 +6,19 @@ import { Accordion } from "react-bootstrap";
 import Footer from "../Components/Footer/Footer";
 
 const Home = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggleText = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const shortText = `MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
+  müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini
+  yürüdür. Beləki...`;
+
+  const fullText = `MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
+  müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini
+  yürüdür. Beləki... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt veniam modi itaque, vel ipsa explicabo dolorum similique maxime alias illo quisquam molestias! Dolor optio quos sapiente nemo, quae dolore eveniet.`;
   return (
     <div>
       <Header />
@@ -38,7 +51,7 @@ const Home = () => {
           <div className="container">
             <div className="numbers">
               <div className="number">
-                <h4>4</h4>
+                <h4>5</h4>
                 <p>Marafon sayı</p>
               </div>
               <div className="number">
@@ -52,6 +65,20 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="education-section">
+          <div className="education">
+            <div className="container">
+              <div className="education-text">
+                <h2>Təhsil müəssisələrinə özəl!</h2>
+                <p>{isExpanded ? fullText : shortText}</p>
+                <button onClick={handleToggleText}>
+                  {isExpanded ? "Daha az göstər" : "Ətraflı"}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="marathon-section">
           <div className="container">
             <div className="marathon">
@@ -105,6 +132,28 @@ const Home = () => {
                   məhsullar təqdim etməkdir. Bu, məhsulun etibarlılığını
                   artırır, problemləri azaldır və xərcləri optimallaşdırır.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="packets-section">
+          <div className="container">
+            <div className="packets">
+              <div className="packet-text">
+                <h4>Marafon Paketləri</h4>
+                <p>Bugün seçimini et, Sabah dan gələcəyini qur!</p>
+              </div>
+              <div className="packet-flex">
+                <div className="packet-card">
+                  <h5>Self-study</h5>
+                  <div className="card-inner">
+                    <p>
+                      A-Z yə roadmap Hər hətfə online görüş Networking qurmaq
+                      7/24 mentor dəstəyi Dərslərin videorecordu Portolio
+                      hazırlanması Müsahibəyə hazırlıq 100% online
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

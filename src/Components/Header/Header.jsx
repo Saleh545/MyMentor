@@ -16,6 +16,7 @@ const Header = () => {
               <Link to="#" >Ana səhifə</Link>
               <Link to="#marathom">Marafonlar</Link>
               <Link to="#about">Haqqımızda</Link>
+              <Link to="#about">Layihəni sat</Link>
               <Link to="#contact">Müraciət et</Link>
             </div>
           </div>
