@@ -16,6 +16,7 @@ const Home = () => {
               <div className="main-left">
                 <h1>MyMentor təcrübə və inkişaf agentliyi</h1>
                 <p>40 gün ərzində karyeranıza ilk addımı bizimlə atın!</p>
+                <h2>95% Praktika!</h2>
               </div>
               <div className="main-right">
                 <div className="main-box">
@@ -24,7 +25,7 @@ const Home = () => {
                     <p className="mymentor">MyMentorda </p>
                     <p className="career">Karyera imkanı!</p>
                     <p className="remote">Full remote </p>
-                    <p className="hour">Əməkhaqqı - hər saat üçün</p>
+                    {/* <p className="hour">Əməkhaqqı - hər saat üçün</p> */}
                     <span>#Gəncistedadlar</span>
                   </div>
                 </div>
@@ -95,6 +96,16 @@ const Home = () => {
                   və məmnun edici bir təcrübə yaratmaqdır.
                 </p>
               </div>
+              <div className="marathon-card">
+                <h1>Quality Assurance</h1>
+                <p>
+                  Keyfiyyətə Nəzarət (QA), məhsul və xidmətlərin yüksək
+                  keyfiyyətdə olmasını təmin edən bir prosesdir. Məqsəd, müştəri
+                  məmnuniyyətini təmin etmək üçün səhvsiz və standartlara uyğun
+                  məhsullar təqdim etməkdir. Bu, məhsulun etibarlılığını
+                  artırır, problemləri azaldır və xərcləri optimallaşdırır.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -106,16 +117,17 @@ const Home = () => {
               <div className="about-flex">
                 <div className="about-left">
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Neque porro recusandae cum quia aliquam quas magni
-                    reprehenderit mollitia incidunt iusto, saepe laboriosam
-                    autem assumenda minima nam iure veniam tempora labore. Neque
-                    inventore optio quasi libero possimus nesciunt obcaecati
-                    praesentium excepturi aliquam suscipit quos beatae nulla
-                    accusamus velit numquam dolore ipsum eius, quibusdam,
-                    quisquam ullam aut. Ad distinctio dicta nemo voluptates eos
-                    dolorum, odit iste veniam. Perferendis, ex! Et, quam fugiat
-                    ducimus ipsam obcaecati hic facere, exercitationem
+                    MyMentor Agency, fərqli sahələrdə özünü inkişaf etdirmək
+                    istəyən şəxslərə 40 günlük marafonlar vasitəsilə dəstək
+                    göstərən bir təlim platformasıdır. Bu marafonlar
+                    çərçivəsində iştirakçılar hərtərəfli hazırlıq prosesindən
+                    keçir, praktiki tapşırıqlar, mentorluq görüşləri və daimi
+                    izləmə ilə dəstəklənir. Marafonlar 5 əsas istiqaməti əhatə
+                    edir və hər bir iştirakçının fərdi hədəflərinə uyğun təlim
+                    proqramı təqdim olunur. Bu platforma, öyrənmə və inkişaf
+                    yolunda olanlara güclü bir təkan verərək, onların
+                    bacarıqlarını artırmaq və hədəflərinə çatmaq üçün zəruri
+                    istiqaməti təmin edir.
                   </p>
                 </div>
                 <div className="about-right">
@@ -174,14 +186,10 @@ const Home = () => {
                     Marafonlar kimlər üçündür?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    Marafonda self study məşğul olanlar, fərqli sahədə çalışıb
+                    sahəsini dəyişmək istəyənlər, kursu yeni bitirib real iş
+                    mühiti ilə tanış olmaq istəyən və gələcəyini yüksək
+                    pillələrə daşımaq istəyən hərkəs qoşula bilər.
                   </Accordion.Body>
                 </Accordion.Item>
 
@@ -190,14 +198,7 @@ const Home = () => {
                     Online iştirak etmək mümkündür?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    Bəli, marafonlar 100% online təşkil edilir.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
@@ -205,14 +206,9 @@ const Home = () => {
                     Hal-hazırda işləyən biri müraciət edə bilər?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    Bəli, işləyən, ixtisasını dəyişmək istəyən və ya daha yeni
+                    texnologiyalar öyrənmək istəyən çalışanlar müraciət edə
+                    bilər.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
@@ -220,14 +216,8 @@ const Home = () => {
                     Proqramlarda təqaüd mövcuddur?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    Bəli, təyin edilmiş zamanlar və partnyorluqlar çərçivəsində
+                    hər bir marafon üzrə təqaüdlü inkişaf imkanı təmin edilir.
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
@@ -236,7 +226,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };
