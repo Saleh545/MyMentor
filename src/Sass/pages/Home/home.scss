@@ -8,6 +8,9 @@
       align-items: center;
       justify-content: space-between;
       height: 73vh;
+      @media (max-width: 576px) {
+        height: 100vh;
+      }
       padding: 0 15px;
       @media (max-width: 576px) {
         flex-direction: column;
@@ -48,6 +51,11 @@
           color: #fff;
           font-size: 53px;
           margin-top: 60px;
+          @media (max-width: 576px) {
+            font-size: 38px;
+            margin-bottom: 20px !important;
+            margin-top: 30px;
+          }
         }
       }
       .main-right {
@@ -442,22 +450,158 @@
       }
     }
   }
-  .packets-section{
-    .packets{
-      .packet-text{
+
+  .packets-section {
+    margin: 20px 0 !important;
+    padding: 0 15px;
+
+    .packets {
+      .packet-text {
         text-align: center;
-        h4{
+
+        h4 {
           color: $darkBlue;
           font-weight: 700;
           font-size: 60px;
         }
-        p{
+
+        p {
           font-weight: 400;
           color: $darkBlue;
           font-size: 26px;
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
           letter-spacing: 0.5px;
-          margin-top: 15px;
+          margin-top: 5px;
+        }
+      }
+
+      .packet-flex {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+
+        @media (max-width: 576px) {
+          flex-direction: column;
+        }
+
+        .packet-card {
+          position: relative;
+          text-align: center;
+          width: 30%;
+          height: 100%;
+
+          @media (max-width: 576px) {
+            width: 100%;
+          }
+
+          h5 {
+            font-size: 40px;
+            color: $darkBlue;
+            font-weight: 700;
+          }
+
+          p {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            padding: 0 50px;
+            flex-grow: 1;
+            margin-bottom: 40px !important;
+            max-height: 235px;
+          }
+
+          .card-inner {
+            margin-top: 10px;
+            border-radius: 30px;
+            background-color: #996515;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 0;
+            justify-content: space-between;
+
+            .card-img {
+              position: absolute;
+              left: -48px;
+              top: 16px;
+              width: 129px;
+              height: 125px;
+              transform: rotate(-12.24deg);
+             
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .card-img2 {
+              position: absolute;
+              right: -44px;
+              top: 4px;
+              width: 129px;
+              height: 125px;
+              transform: scaleX(-1);
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .price-flex {
+              display: flex;
+              column-gap: 40px;
+
+              .old-price {
+                .price-crossed {
+                  position: relative;
+
+                  &::before,
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    top: 34%;
+                    left: 15px;
+                    width: 84%;
+                    height: 4px;
+                    background-color: black;
+                  }
+
+                  &::before {
+                    transform: rotate(-35deg);
+                  }
+
+                  &::after {
+                    transform: rotate(35deg);
+                  }
+                }
+              }
+
+              .price {
+                span {
+                  font-size: 20px;
+                  color: #fff;
+                  font-weight: 700;
+                }
+
+                h4 {
+                  font-size: 40px;
+                  color: #fff;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            button {
+              border: none;
+              outline: none;
+              padding: 20px 40px;
+              border-radius: 40px;
+              font-size: 26px;
+              font-weight: 700;
+              letter-spacing: 2px;
+              margin-top: 40px;
+            }
+          }
         }
       }
     }

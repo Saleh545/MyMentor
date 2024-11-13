@@ -4,6 +4,7 @@ import mainImage from "../../public/Images/MainImage.png";
 import icon from "../../public/Images/MyMentor.jpg";
 import { Accordion } from "react-bootstrap";
 import Footer from "../Components/Footer/Footer";
+import hat from "../../public/Images/hat-left.png";
 
 const Home = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -38,7 +39,7 @@ const Home = () => {
                     <p className="mymentor">MyMentorda </p>
                     <p className="career">Karyera imkanı!</p>
                     <p className="remote">Full remote </p>
-                    {/* <p className="hour">Əməkhaqqı - hər saat üçün</p> */}
+                    {/* <p className="hour">Əməkhaqqı - hər sah4t üçün</p> */}
                     <span>#Gəncistedadlar</span>
                   </div>
                 </div>
@@ -147,11 +148,57 @@ const Home = () => {
                 <div className="packet-card">
                   <h5>Self-study</h5>
                   <div className="card-inner">
+                    <div className="card-img">
+                      <img src={hat} alt="" />
+                    </div>
                     <p>
-                      A-Z yə roadmap Hər hətfə online görüş Networking qurmaq
-                      7/24 mentor dəstəyi Dərslərin videorecordu Portolio
-                      hazırlanması Müsahibəyə hazırlıq 100% online
+                      A-Z yə roadmap
+                      <br />
+                      Hər həftə online görüş
+                      <br />
+                      Networking qurmaq <br />
+                      7/24 mentor dəstəyi <br /> Dərslərin videorecordu <br />{" "}
+                      Portolio hazırlanması <br /> Müsahibəyə hazırlıq <br />{" "}
+                      100% online
                     </p>
+                    <div className="price-flex">
+                      <div className="price old-price">
+                        <span>Birdəfəlik</span>
+                        <h4 className="price-crossed">80AZN</h4>
+                      </div>
+                      <div className="price new-price">
+                        <span>Birdəfəlik</span>
+                        <h4>60AZN</h4>
+                      </div>
+                    </div>
+                    <button>Müraciət</button>
+                  </div>
+                </div>
+                <div className="packet-card">
+                  <h5>Next step job</h5>
+                  <div className="card-inner">
+                  <div className="card-img2">
+                      <img src={hat} alt="" />
+                    </div>
+                    <p>
+                      Real proyektlər üzərində inkişaf <br /> Hər həftə online
+                      görüş <br />
+                      Real iş mühitinə hazırlıq. <br /> 7/24 mentor dəstəyi{" "}
+                      <br /> Görüşlərin videorecordu <br /> Portfolio
+                      hazırlanması <br /> Müsahibəyə hazırlıq <br />
+                      Networking qurmaq <br /> 100% online
+                    </p>
+                    <div className="price-flex">
+                      <div className="price old-price">
+                        <span>Birdəfəlik</span>
+                        <h4 className="price-crossed">100AZN</h4>
+                      </div>
+                      <div className="price new-price">
+                        <span>Birdəfəlik</span>
+                        <h4>60AZN</h4>
+                      </div>
+                    </div>
+                    <button>Müraciət</button>
                   </div>
                 </div>
               </div>
