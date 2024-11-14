@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/Header";
 import mainImage from "../../public/Images/MainImage.png";
-import icon from "../../public/Images/MyMentor.jpg";
+import icon from "../../public/Images/icon.jpg";
 import { Accordion } from "react-bootstrap";
 import Footer from "../Components/Footer/Footer";
 import hat from "../../public/Images/hat-left.png";
+import girl from "../../public/Images/sumkali-qiz.jpg";
+import ilkin from "../../public/Images/ilkin.jpg";
+import nigar from "../../public/Images/nigar.jpg";
+import ruhid from "../../public/Images/ruhid.jpg";
+import tebibe from "../../public/Images/tebibe.jpg";
 
 const Home = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -177,7 +182,7 @@ const Home = () => {
                 <div className="packet-card">
                   <h5>Next step job</h5>
                   <div className="card-inner">
-                  <div className="card-img2">
+                    <div className="card-img2">
                       <img src={hat} alt="" />
                     </div>
                     <p>
@@ -202,16 +207,41 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+              <h6>40 GÜN</h6>
             </div>
           </div>
         </div>
+        <div className="student-section">
+          <div className="student">
+            <div className="student-flex">
+              <div className="student-img">
+                <img src={girl} alt="" />
+              </div>
+              <div className="student-comment">
+              <h1>Yüzlərlə tələbə bizi seçir!</h1>
+
+                <div className="up">
+                  <div className="comment-img"><img src={nigar} alt="" /></div>
+                  <div className="comment-img"><img src={ruhid} alt="" /></div>       
+                </div>
+          
+                <div className="down">
+                <div className="comment-img"><img src={tebibe} alt="" /></div>
+                <div className="comment-img"><img src={ilkin} alt="" /></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="about-section">
           <div className="container">
             <div className="about">
-              <h2>Haqqımızda</h2>
 
               <div className="about-flex">
                 <div className="about-left">
+              <h2>Haqqımızda</h2>
                   <p>
                     MyMentor Agency, fərqli sahələrdə özünü inkişaf etdirmək
                     istəyən şəxslərə 40 günlük marafonlar vasitəsilə dəstək
