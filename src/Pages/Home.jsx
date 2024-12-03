@@ -10,6 +10,7 @@ import ilkin from "../../public/Images/ilkin.jpg";
 import nigar from "../../public/Images/nigar.jpg";
 import ruhid from "../../public/Images/ruhid.jpg";
 import tebibe from "../../public/Images/tebibe.jpg";
+import studentImg from "../../public/Images/bg-img.png";
 
 const Home = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -72,6 +73,9 @@ const Home = () => {
           </div>
         </div>
         <div className="education-section">
+          <div className="bck-image">
+            <img src={studentImg} alt="" />
+          </div>
           <div className="education">
             <div className="container">
               <div className="education-text">
@@ -218,18 +222,25 @@ const Home = () => {
                 <img src={girl} alt="" />
               </div>
               <div className="student-comment">
-              <h1>Yüzlərlə tələbə bizi seçir!</h1>
+                <h1>Yüzlərlə tələbə bizi seçir!</h1>
 
                 <div className="up">
-                  <div className="comment-img"><img src={nigar} alt="" /></div>
-                  <div className="comment-img"><img src={ruhid} alt="" /></div>       
-                </div>
-          
-                <div className="down">
-                <div className="comment-img"><img src={tebibe} alt="" /></div>
-                <div className="comment-img"><img src={ilkin} alt="" /></div>
+                  <div className="comment-img">
+                    <img src={nigar} alt="" />
+                  </div>
+                  <div className="comment-img">
+                    <img src={ruhid} alt="" />
+                  </div>
                 </div>
 
+                <div className="down">
+                  <div className="comment-img">
+                    <img src={tebibe} alt="" />
+                  </div>
+                  <div className="comment-img">
+                    <img src={ilkin} alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -238,10 +249,9 @@ const Home = () => {
         <div className="about-section">
           <div className="container">
             <div className="about">
-
               <div className="about-flex">
                 <div className="about-left">
-              <h2>Haqqımızda</h2>
+                  <h2>Haqqımızda</h2>
                   <p>
                     MyMentor Agency, fərqli sahələrdə özünü inkişaf etdirmək
                     istəyən şəxslərə 40 günlük marafonlar vasitəsilə dəstək
