@@ -25,7 +25,7 @@ const Home = () => {
 
   const fullText = `MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
   müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini
-  yürüdür. Beləki... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt veniam modi itaque, vel ipsa explicabo dolorum similique maxime alias illo quisquam molestias! Dolor optio quos sapiente nemo, quae dolore eveniet.`;
+  yürüdür. Beləki Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt veniam modi itaque, vel ipsa explicabo dolorum similique maxime alias illo quisquam molestias! Dolor optio quos sapiente nemo, quae dolore eveniet.`;
   return (
     <div>
       <Header />
@@ -42,10 +42,9 @@ const Home = () => {
                 <div className="main-box">
                   <img src={mainImage} alt="" />
                   <div className="main-text">
-                    <p className="mymentor">MyMentorda </p>
-                    <p className="career">Karyera imkanı!</p>
-                    <p className="remote">Full remote </p>
-                    {/* <p className="hour">Əməkhaqqı - hər sah4t üçün</p> */}
+                    <p className="mymentor">
+                      MyMentorla <br /> Karyera qur!{" "}
+                    </p>
                     <span>#Gəncistedadlar</span>
                   </div>
                 </div>
@@ -58,11 +57,11 @@ const Home = () => {
           <div className="container">
             <div className="numbers">
               <div className="number">
-                <h4>5</h4>
+                <h4>6</h4>
                 <p>Marafon sayı</p>
               </div>
               <div className="number">
-                <h4>50+</h4>
+                <h4>60+</h4>
                 <p>Tələbə sayı</p>
               </div>
               <div className="number">
@@ -173,11 +172,11 @@ const Home = () => {
                     <div className="price-flex">
                       <div className="price old-price">
                         <span>Birdəfəlik</span>
-                        <h4 className="price-crossed">80AZN</h4>
+                        <h4 className="price-crossed">150AZN</h4>
                       </div>
                       <div className="price new-price">
                         <span>Birdəfəlik</span>
-                        <h4>60AZN</h4>
+                        <h4>119AZN</h4>
                       </div>
                     </div>
                     <button>Müraciət</button>
@@ -200,11 +199,11 @@ const Home = () => {
                     <div className="price-flex">
                       <div className="price old-price">
                         <span>Birdəfəlik</span>
-                        <h4 className="price-crossed">100AZN</h4>
+                        <h4 className="price-crossed">150AZN</h4>
                       </div>
                       <div className="price new-price">
                         <span>Birdəfəlik</span>
-                        <h4>60AZN</h4>
+                        <h4>119ZN</h4>
                       </div>
                     </div>
                     <button>Müraciət</button>
@@ -225,22 +224,34 @@ const Home = () => {
                 <h1>Yüzlərlə tələbə bizi seçir!</h1>
 
                 <div className="up">
-                  <div className="comment-img">
-                    <img src={nigar} alt="" />
+                  <div className="comment-card">
+                    <span> &ldquo;</span>
+                    <p>
+                      Proqram mənim üçün çox faydalı oldu, müxtəlif layihələrin
+                      hazırlanması və təqdim edilməsi, həmçinin komanda ilə
+                      işləmək və müəyyən məsələləri araşdırmaq, digər
+                      komandaların layihələrini izləmək mənə çox kömək etdi.
+                    </p>
+                    <h6>Nigar Əlizadə </h6>
+                    <h4>Polşa</h4>
+
+                    <span className="rdquo">&rdquo;</span>
                   </div>
-                  <div className="comment-img">
-                    <img src={ruhid} alt="" />
+                  <div className="comment-card">
+                    <span className="ldquo"> &ldquo;</span>
+                    <p>
+                      Proqramın Data Science üzrə detallı 4 hissəyə bölünməsi
+                      yaxşı faktordur. Proqram vasitəsi ilə də üzrə lazımı olan
+                      bilikləri aldığımız düşünürəm. Həm teorik həm də praktiki
+                      tərəfdən inkişaf etdirəcək lahiyə idi.
+                    </p>
+                    <h6>Ruhid Dadaşov </h6>
+                    <h4>MACARISTAN</h4>
+                    <span className="rdquo">&rdquo;</span>
                   </div>
                 </div>
 
-                <div className="down">
-                  <div className="comment-img">
-                    <img src={tebibe} alt="" />
-                  </div>
-                  <div className="comment-img">
-                    <img src={ilkin} alt="" />
-                  </div>
-                </div>
+                <div className="down"></div>
               </div>
             </div>
           </div>
