@@ -256,7 +256,7 @@
     background-color: #fff;
     .about {
       h2 {
-        font-size: 53px;
+        font-size: 45px;
         color: $darkBlue;
         font-weight: 700;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
@@ -284,7 +284,7 @@
             font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
             color: $darkBlue;
             text-align: left;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             @media (max-width: 576px) {
               font-size: 17px;
@@ -302,7 +302,7 @@
               margin-top: 20px;
             }
             img {
-              width: 100%;
+              width: 80%;
             }
           }
           p {
@@ -320,7 +320,7 @@
         justify-content: space-around;
         padding: 100px 0;
         .flag-img {
-          width: 115px;
+          width: 100px;
           height: 67px;
           margin: 10px 0;
           border-radius: 20px;
@@ -426,7 +426,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 35px;
+      padding: 0 75px;
 
       .education-text {
         width: 60%;
@@ -475,11 +475,11 @@
     .packets {
       h6 {
         color: #e7e6e9;
-        font-size: 350px;
+        font-size: 300px;
         position: absolute;
         top: -4%;
         text-align: center;
-        right: 8%;
+        right: 15%;
         font-weight: 700;
         z-index: -1;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -493,16 +493,16 @@
         h4 {
           color: $darkBlue;
           font-weight: 700;
-          font-size: 60px;
+          font-size: 45px;
           @media (max-width: 576px) {
-            font-size: 45px;
+            font-size: 35px;
           }
         }
 
         p {
           font-weight: 400;
           color: $darkBlue;
-          font-size: 26px;
+          font-size: 20px;
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
           letter-spacing: 0.5px;
           margin-top: 5px;
@@ -538,7 +538,7 @@
           }
 
           h5 {
-            font-size: 35px;
+            font-size: 30px;
             color: $darkBlue;
             font-weight: 700;
             @media (max-width: 576px) {
@@ -547,7 +547,7 @@
           }
 
           p {
-            font-size: 22px;
+            font-size: 18 px;
             font-weight: 700;
             color: #fff;
             padding: 0 50px;
@@ -632,7 +632,7 @@
 
               .price {
                 span {
-                  font-size: 20px;
+                  font-size: 15px;
                   color: #fff;
                   font-weight: 700;
                   @media (max-width: 576px) {
@@ -641,7 +641,7 @@
                 }
 
                 h4 {
-                  font-size: 40px;
+                  font-size: 35px;
                   color: #fff;
                   font-weight: 700;
                   @media (max-width: 576px) {
@@ -654,9 +654,9 @@
             button {
               border: none;
               outline: none;
-              padding: 20px 40px;
+              padding: 15px 25px;
               border-radius: 40px;
-              font-size: 26px;
+              font-size: 18px;
               font-weight: 700;
               letter-spacing: 2px;
               margin-top: 40px;

@@ -246,7 +246,7 @@ const Home = () => {
                       tərəfdən inkişaf etdirəcək lahiyə idi.
                     </p>
                     <h6>Ruhid Dadaşov </h6>
-                    <h4>MACARISTAN</h4>
+                    <h4>Macarıstan</h4>
                     <span className="rdquo">&rdquo;</span>
                   </div>
                 </div>
