@@ -217,6 +217,7 @@ const Home = () => {
         <div className="student-section">
           <div className="student">
             <div className="student-flex">
+                <h1>Yüzlərlə tələbə bizi seçir!</h1>
               <div className="student-img">
                 <img src={girl} alt="" />
               </div>
