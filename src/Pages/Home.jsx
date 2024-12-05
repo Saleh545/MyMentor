@@ -257,8 +257,8 @@ const Home = () => {
                     <span className="ldquo" > &ldquo;</span>
                     <p>
                       Proqram gözlədiyimdən maraqlı və faydalı oldu. Nə
-                      qədərsevməsəm də, komanda ilə işləmə bacarığımın da
-                      birazartdığını düşünürəm.{" "}
+                      qədər sevməsəm də, komanda ilə işləmə bacarığımın da
+                      biraz artdığını düşünürəm.{" "}
                     </p>
                     <h6>İlkin Qəmbərli</h6>
                     <h4>AZƏRBAYCAN</h4>
