@@ -217,7 +217,7 @@ const Home = () => {
         <div className="student-section">
           <div className="student">
             <div className="student-flex">
-                <h1>Yüzlərlə tələbə bizi seçir!</h1>
+              <h1>Yüzlərlə tələbə bizi seçir!</h1>
               <div className="student-img">
                 <img src={girl} alt="" />
               </div>
@@ -226,7 +226,7 @@ const Home = () => {
 
                 <div className="up">
                   <div className="comment-card">
-                    <span> &ldquo;</span>
+                    <span className="ldquo" > &ldquo;</span>
                     <p>
                       Proqram mənim üçün çox faydalı oldu, müxtəlif layihələrin
                       hazırlanması və təqdim edilməsi, həmçinin komanda ilə
@@ -252,7 +252,32 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="down"></div>
+                <div className="down">
+                  <div className="comment-card">
+                    <span className="ldquo" > &ldquo;</span>
+                    <p>
+                      Proqram gözlədiyimdən maraqlı və faydalı oldu. Nə
+                      qədərsevməsəm də, komanda ilə işləmə bacarığımın da
+                      birazartdığını düşünürəm.{" "}
+                    </p>
+                    <h6>İlkin Qəmbərli</h6>
+                    <h4>AZƏRBAYCAN</h4>
+
+                    <span className="rdquo">&rdquo;</span>
+                  </div>
+                  <div className="comment-card">
+                    <span className="ldquo"> &ldquo;</span>
+                    <p>
+                      Program, maşın öyrənməsinə dərindən daxil
+                      olmaq,praktiki bacarıqları inkişaf etdirmək və
+                      istedadlı həmyaşıdları ilə əməkdaşlıq etmək üçün
+                      zənginləşdirici və maraqlı fürsət təqdim etdi. Mən bu
+                      yenilikçi və dinamik mühitin bir hissəsi olmağı çox sevdim.                    </p>
+                    <h6>Təbibə İsmayılova </h6>
+                    <h4>AZƏRBAYCAN</h4>
+                    <span className="rdquo">&rdquo;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
