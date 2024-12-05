@@ -172,11 +172,11 @@ const Home = () => {
                     <div className="price-flex">
                       <div className="price old-price">
                         <span>Birdəfəlik</span>
-                        <h4 className="price-crossed">150AZN</h4>
+                        <h4 className="price-crossed">119AZN</h4>
                       </div>
                       <div className="price new-price">
                         <span>Birdəfəlik</span>
-                        <h4>119AZN</h4>
+                        <h4>79AZN</h4>
                       </div>
                     </div>
                     <button>Müraciət</button>
@@ -199,11 +199,11 @@ const Home = () => {
                     <div className="price-flex">
                       <div className="price old-price">
                         <span>Birdəfəlik</span>
-                        <h4 className="price-crossed">150AZN</h4>
+                        <h4 className="price-crossed">119AZN</h4>
                       </div>
                       <div className="price new-price">
                         <span>Birdəfəlik</span>
-                        <h4>119ZN</h4>
+                        <h4>79ZN</h4>
                       </div>
                     </div>
                     <button>Müraciət</button>
