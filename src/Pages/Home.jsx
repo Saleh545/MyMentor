@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Components/Header/Header";
 import mainImage from "../../public/Images/MainImage.png";
 import icon from "../../public/Images/icon.jpg";
@@ -8,8 +8,8 @@ import hat from "../../public/Images/hat-left.png";
 import girl from "../../public/Images/sumkali-qiz.jpg";
 import studentImg from "../../public/Images/bg-img.png";
 import Swal from "sweetalert2";
-import { useForm, ValidationError } from "@formspree/react";
-import { Link } from "react-router-dom";
+import { useForm, } from "@formspree/react";
+import { Link, useLocation } from "react-router-dom";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -44,6 +44,12 @@ const Home = () => {
   const handleToggleText = () => {
     setIsExpanded(!isExpanded);
   };
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
 
   const shortText = `MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
     müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini

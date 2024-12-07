@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useForm, ValidationError } from "@formspree/react";
 import Header from "../Components/Header/Header";
+import { useLocation } from "react-router-dom";
 
 const Education = () => {
   const [eduİnstit, setEduİnstit] = useState("");
@@ -26,8 +27,15 @@ const Education = () => {
     await handleSubmit(e);
     handleCustomSubmit(e);
   };
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+
   return (
-    <div className="education">
+    <div className="education-page">
       <Header />
       <div className="container">
         <div className="education-text">
