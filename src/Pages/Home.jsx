@@ -9,6 +9,7 @@ import girl from "../../public/Images/sumkali-qiz.jpg";
 import studentImg from "../../public/Images/bg-img.png";
 import Swal from "sweetalert2";
 import { useForm, ValidationError } from "@formspree/react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -105,9 +106,10 @@ const Home = () => {
             <div className="education-text">
               <h2>Təhsil müəssisələrinə özəl!</h2>
               <p>{isExpanded ? fullText : shortText}</p>
-              <button onClick={handleToggleText}>
+              {/* <button onClick={handleToggleText}>
                 {isExpanded ? "Daha az göstər" : "Ətraflı"}
-              </button>
+              </button>  */}
+              <Link to="/education" >Ətraflı</Link>
             </div>
           </div>
         </div>
@@ -432,7 +434,7 @@ const Home = () => {
                   <input
                     type="text"
                     id="name"
-                    name="name"
+                    name="Adı Soyadı"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -443,7 +445,7 @@ const Home = () => {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
+                    name="Telefon Nömrəsi"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
@@ -453,13 +455,7 @@ const Home = () => {
                 </div>
 
                 <div className="form-group">
-                  <select
-                    id="program"
-                    name="program"
-                    value={program}
-                    onChange={(e) => setProgram(e.target.value)}
-                    required
-                  >
+                  <select id="program" name="Seçdiyi proqram" value={program} onChange={(e) => setProgram(e.target.value)} required >
                     <option value="" disabled selected>
                       Marafon seçin
                     </option>
@@ -469,13 +465,7 @@ const Home = () => {
                   </select>
                 </div>
                 <div className="form-group">
-                  <select
-                    id="price"
-                    name="price"
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                    required
-                  >
+                  <select id="price" name="Seçdiyi paket" value={price} onChange={(e) => setPrice(e.target.value)} required >
                     <option value="" disabled selected>
                       Paket seçin
                     </option>

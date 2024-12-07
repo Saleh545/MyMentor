@@ -8,10 +8,10 @@ const Header = () => {
       <header>
         <div className="container">
           <div className="header">
-            <div className="left">
+            <Link to="/" className="left">
               <div className="left-img"><img  src={icon} alt="icon" /></div>
               <span className="icon-text">MyMentor Internship & Development Agency</span>
-            </div>            
+            </Link>            
             <div className="navbar">
               <Link to="#" >Ana səhifə</Link>
               <Link to="#marathom">Marafonlar</Link>
