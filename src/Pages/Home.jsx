@@ -13,8 +13,8 @@ import { useForm, ValidationError } from "@formspree/react";
 const Home = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [program, setProgram] = useState("frontend");
-  const [price, setPrice] = useState("100");
+  const [program, setProgram] = useState("");
+  const [price, setPrice] = useState("");
   const [message, setMessage] = useState("");
 
   const [state, handleSubmit] = useForm("mwpkzjjz");
@@ -447,13 +447,12 @@ const Home = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                    placeholder="Mobil (whatsapp)"
+                    placeholder="Mobil (WhatsApp) "
                     required
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="program">Program Seçin:</label>
                   <select
                     id="program"
                     name="program"
@@ -461,13 +460,15 @@ const Home = () => {
                     onChange={(e) => setProgram(e.target.value)}
                     required
                   >
+                    <option value="" disabled selected>
+                      Marafon seçin
+                    </option>
                     <option value="frontend">Frontend</option>
                     <option value="backend">Backend</option>
                     <option value="fullstack">Fullstack</option>
                   </select>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="price">Fiyat Seçin:</label>
                   <select
                     id="price"
                     name="price"
@@ -475,6 +476,10 @@ const Home = () => {
                     onChange={(e) => setPrice(e.target.value)}
                     required
                   >
+                    <option value="" disabled selected>
+                      Paket seçin
+                    </option>
+
                     <option value="100">100 TL</option>
                     <option value="200">200 TL</option>
                     <option value="300">300 TL</option>

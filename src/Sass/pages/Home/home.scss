@@ -140,6 +140,7 @@
     }
   }
 }
+
 .marathon-section {
   background-color: $darkBlue;
   padding: 90px 15px;
@@ -253,6 +254,7 @@
     }
   }
 }
+
 .about-section {
   background-color: #fff;
   .about {
@@ -337,6 +339,7 @@
     }
   }
 }
+
 .questions-section {
   background-color: $darkBlue;
   margin-top: 80px;
@@ -386,6 +389,7 @@
     }
   }
 }
+
 .education-section {
   position: relative;
   height: 100vh;
@@ -470,6 +474,7 @@
     }
   }
 }
+
 .packets-section {
   margin: 20px 0 40px 0 !important;
   padding: 0 45px;
@@ -672,6 +677,7 @@
     }
   }
 }
+
 .student-section {
   padding: 50px 25px;
   background-color: $darkBlue;
@@ -817,8 +823,82 @@
     }
   }
 }
-.register-section{
-  .register-flex{
+
+.register-section {
+  margin: 80px 0 !important;
+  padding: 0 20px;
+
+  .register-flex {
     display: flex;
+    justify-content: space-between;
+
+    .register-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-weight: 700;
+        font-size: 35px;
+      }
+    }
+
+    .register-form {
+      width: 50%;
+
+      .form-group {
+        margin-top: 15px;
+
+        input {
+          outline: none;
+          border: none;
+          border-bottom: 2px solid black;
+          padding-bottom: 10px;
+          width: 100%;
+        }
+
+        ::placeholder {
+          color: black;
+          font-size: 17px;
+          font-weight: 700;
+        }
+
+        button {
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          background-color: #18072B;
+          color: #fff;
+          padding: 10px 20px;
+          font-weight: 700;
+        }
+      }
+
+      select {
+        outline: none;
+        border: none;
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 700;
+        color: black;
+        background-color: transparent;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+
+        // Placeholder gibi görünen ilk option
+        option:first-child {
+          color: gray; // Placeholder rengini gri yapıyoruz
+        }
+
+        // Seçildiğinde stil değişikliği
+        &:focus {
+          border-color: #260b44; // Focus border color
+        }
+      }
+    }
   }
 }
