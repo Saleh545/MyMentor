@@ -31,8 +31,8 @@ const Home = () => {
     });
     setName("");
     setPhone("");
-    setProgram("frontend");
-    setPrice("100");
+    setProgram("");
+    setPrice("");
     setMessage("");
   };
   const handleFormSubmit = async (e) => {
@@ -47,9 +47,14 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (location.hash) {
+      // Eğer hash varsa, ilgili öğeye kaydırma yapılacak
+      const targetElement = document.querySelector(location.hash);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   }, [location]);
-
 
   const shortText = `MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
     müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini
@@ -212,7 +217,7 @@ const Home = () => {
                       <h4>70AZN</h4>
                     </div>
                   </div>
-                  <button>Müraciət</button>
+                  <Link to="/#registerForm">Müraciət</Link>
                 </div>
               </div>
               <div className="packet-card">
@@ -239,7 +244,7 @@ const Home = () => {
                       <h4>70AZN</h4>
                     </div>
                   </div>
-                  <button>Müraciət</button>
+                  <Link to="#registerForm">Müraciət</Link>
                 </div>
               </div>
             </div>
@@ -428,7 +433,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="register-section">
+      <div className="register-section" id="registerForm">
         <div className="container">
           <div className="register-flex">
             <div className="register-text">
@@ -455,7 +460,7 @@ const Home = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                    placeholder="Mobil (WhatsApp) "
+                    placeholder="Mobil (WhatsApp) 0501234567 "
                     required
                   />
                 </div>
@@ -465,20 +470,17 @@ const Home = () => {
                     <option value="" disabled selected>
                       Marafon seçin
                     </option>
-                    <option value="frontend">Frontend</option>
-                    <option value="backend">Backend</option>
-                    <option value="fullstack">Fullstack</option>
+                    <option value="Datascience">Data science</option>
+                    <option value="Frontend proqramlaşdırma">Frontend proqramlaşdırma</option>
+                    <option value="Excel ilə Data analitikası">Excel ilə Data analitikası</option>
+                    <option value="UI/UX design">UI/UX design</option>
+                    <option value="Quality Assurance">Quality Assurance</option>
                   </select>
                 </div>
                 <div className="form-group">
                   <select id="price" name="Seçdiyi paket" value={price} onChange={(e) => setPrice(e.target.value)} required >
-                    <option value="" disabled selected>
-                      Paket seçin
-                    </option>
-
-                    <option value="100">100 TL</option>
-                    <option value="200">200 TL</option>
-                    <option value="300">300 TL</option>
+                    <option value="" disabled selected>Paket seçin</option>
+                    <option value="70 azn">70 Azn </option>
                   </select>
                 </div>
                 <div className="form-group">
