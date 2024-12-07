@@ -831,6 +831,8 @@
   .register-flex {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 576px) {
+flex-direction: column;    }
 
     .register-text {
       display: flex;
@@ -845,6 +847,10 @@
 
     .register-form {
       width: 50%;
+      @media (max-width: 576px) {
+        width: 100%;
+        margin-top: 20px;
+      }
 
       .form-group {
         margin-top: 15px;
@@ -871,6 +877,9 @@
           color: #fff;
           padding: 10px 20px;
           font-weight: 700;
+          &:hover{
+            background-color: #8833B2;
+          }
         }
       }
 
@@ -889,14 +898,12 @@
         -moz-appearance: none;
         cursor: pointer;
 
-        // Placeholder gibi görünen ilk option
         option:first-child {
-          color: gray; // Placeholder rengini gri yapıyoruz
+          color: gray; 
         }
 
-        // Seçildiğinde stil değişikliği
         &:focus {
-          border-color: #260b44; // Focus border color
+          border-color: #260b44;
         }
       }
     }

@@ -1,5 +1,5 @@
 .footer-section {
-  background-color: #fff !important  ;
+  background-color: $darkBlue !important  ;
   .footer-flex {
     display: flex;
     justify-content: space-evenly;
@@ -10,7 +10,7 @@
     .footer-left {
       h2 {
         font-size: 26px;
-        color: $darkBlue;
+        color: #fff;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
         font-weight: 700;
       }
@@ -24,14 +24,14 @@
           border: 1px solid #fff;
           svg {
             padding: 9px;
-            color: $darkBlue;
+            color: #fff;
             width: 33px;
             height: 33px;
           }
         }
         a {
           font-size: 18px;
-        color: $darkBlue;
+        color: #fff;
           font-weight: 700;
         }
       }
@@ -42,17 +42,17 @@
         margin-top: 20px;
         .mail-icon {
           border-radius: 50px;
-          border: 1px solid $darkBlue;
+          border: 1px solid #fff;
           svg {
             width: 33px;
             height: 33px;
             padding: 9px;
-            color: $darkBlue;
+            color: #fff;
           }
         }
         a {
           font-size: 18px;
-        color: $darkBlue;
+        color: #fff;
           font-weight: 700;
         }
       }
@@ -67,7 +67,7 @@
         margin-top: 30px;
       }
       h5 {
-        color: $darkBlue;
+        color: #fff;
         font-size: 20px;
         font-weight: 700;
       }
