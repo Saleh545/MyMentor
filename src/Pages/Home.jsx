@@ -18,7 +18,7 @@ const Home = () => {
   const [price, setPrice] = useState("");
   const [message, setMessage] = useState("");
 
-  const [state, handleSubmit] = useForm("mwpkzjjz");
+  const [state, handleSubmit] = useForm("mqakoepl");
 
   const handleCustomSubmit = (e) => {
     e.preventDefault();
@@ -48,7 +48,6 @@ const Home = () => {
 
   useEffect(() => {
     if (location.hash) {
-      // Eğer hash varsa, ilgili öğeye kaydırma yapılacak
       const targetElement = document.querySelector(location.hash);
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth' });
@@ -77,7 +76,9 @@ const Home = () => {
               </div>
               <div className="main-right">
                 <div className="main-box">
+                  <div className="main-image">
                   <img src={mainImage} alt="" />
+                  </div>
                   <div className="main-text">
                     <p className="mymentor">
                       MyMentorla <br /> Karyera qur!{" "}
@@ -480,7 +481,8 @@ const Home = () => {
                 <div className="form-group">
                   <select id="price" name="Seçdiyi paket" value={price} onChange={(e) => setPrice(e.target.value)} required >
                     <option value="" disabled selected>Paket seçin</option>
-                    <option value="70 azn">70 Azn </option>
+                    <option value="Self-study">Self-study </option>
+                    <option value="Next step job">Next step job </option>
                   </select>
                 </div>
                 <div className="form-group">
