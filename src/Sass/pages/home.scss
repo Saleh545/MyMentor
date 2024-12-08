@@ -112,6 +112,7 @@
     }
   }
 }
+
 .numbers-section {
   padding: 0 15px;
   margin: 90px 0 !important;
@@ -155,6 +156,7 @@
     }
   }
 }
+
 .education-section {
   position: relative;
   height: 100vh;
@@ -281,14 +283,14 @@
       display: flex !important;
       align-items: center;
       justify-content: center;
-      height: 150px; /* Her iki kart için aynı yükseklik ayarını ekledik */
-      justify-content: space-between; /* İçeriği yukarıdan aşağıya doğru yerleştirir */
-      overflow: hidden; /* İçeriğin dışarı taşmasını engellemek için */
-
+      height: 150px; 
+      justify-content: space-between; 
+      overflow: hidden; 
       @media (max-width: 576px) {
         width: 100%;
-        height: auto; /* Mobilde yükseklik otomatik olacak */
+        height: auto;
         flex-direction: column;
+        padding: 20px 15px;
       }
 
       h1 {
@@ -370,7 +372,6 @@
   margin: 20px 0 40px 0 !important;
   padding: 0 45px;
   position: relative;
-
   .packets {
     h6 {
       color: #e7e6e9;
@@ -447,11 +448,12 @@
           font-size: 18px;
           font-weight: 700;
           color: #fff;
-          padding: 0 50px;
+          padding: 0 10px;
           flex-grow: 1; /* Allow this section to grow and fill available space */
           margin-bottom: 40px !important;
           @media (max-width: 576px) {
             font-size: 18px;
+            padding: 0 15px;
           }
         }
 
@@ -468,14 +470,16 @@
 
           .card-img {
             position: absolute;
-            left: -48px;
-            top: 16px;
+            left: -53px;
+            top: 0;
             width: 129px;
             height: 125px;
             transform: rotate(-12.24deg);
             @media (max-width: 576px) {
               width: 100px;
               height: 100px;
+              left: -40px;
+              top: 10px;
             }
             img {
               width: 100%;
@@ -484,14 +488,16 @@
 
           .card-img2 {
             position: absolute;
-            right: -44px;
-            top: 4px;
+            right: -55px;
+            top: 0;
             width: 129px;
             height: 125px;
-            transform: scaleX(-1);
+            transform: scaleX(-1) rotate(-15deg);
             @media (max-width: 576px) {
               width: 100px;
               height: 100px;
+              right: -40px;
+              top: 10px;
             }
             img {
               width: 100%;
@@ -854,8 +860,6 @@
     }
   }
 }
-
-
 
 .register-section {
   margin: 80px 0 !important;
