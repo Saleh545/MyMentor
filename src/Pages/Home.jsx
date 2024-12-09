@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Header from "../Components/Header/Header";
-import mainImage from "../../public/Images/MainImage.png";
+import Main from "../Components/Main/Main";
 import icon from "../../public/Images/icon.jpg";
 import { Accordion } from "react-bootstrap";
 import Footer from "../Components/Footer/Footer";
@@ -8,18 +8,15 @@ import hat from "../../public/Images/hat-left.png";
 import girl from "../../public/Images/sumkali-qiz.jpg";
 import studentImg from "../../public/Images/bg-img.png";
 import Swal from "sweetalert2";
-import { useForm, } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import { Link, useLocation } from "react-router-dom";
-import Gsap from "../Components/Gsap";
 import { gsap } from "gsap";
-
 
 const Home = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [program, setProgram] = useState("");
   const [price, setPrice] = useState("");
-  const [message, setMessage] = useState("");
 
   const [state, handleSubmit] = useForm("mqakoepl");
 
@@ -44,84 +41,21 @@ const Home = () => {
   };
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleToggleText = () => {
-    setIsExpanded(!isExpanded);
-  };
   const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
       const targetElement = document.querySelector(location.hash);
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        targetElement.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
-   const boxRef = useRef(null);
 
-   useEffect(() => {
-    gsap.from(boxRef.current, {
-      x: 500, // Sağdan 500px uzaklıktan başlasın
-      opacity: 0, // Başlangıçta şeffaf
-      duration: 1.5, // 1.5 saniye süresince animasyon
-    });
-  }, []);
-  useEffect(() => {
-    gsap.from(".main-left h1", {
-      x: -200, // Sol taraftan 200px uzaklık
-      opacity: 0, // Başlangıçta şeffaf
-      duration: 1, // 1 saniyede animasyonu bitir
-    });
-    gsap.from(".main-left p", {
-      x: -200,
-      opacity: 0,
-      duration: 1,
-      delay: 0.3, // H1 animasyonu bittikten 0.3 saniye sonra başlasın
-    });
-    gsap.from(".main-left h2", {
-      x: -200,
-      opacity: 0,
-      duration: 1,
-      delay: 0.6, // P animasyonu bittikten 0.6 saniye sonra başlasın
-    });
-  }, []);
-
-  const shortText = `MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
-    müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini
-    yürüdür. Beləki...`;
-
-  const fullText = `MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
-    müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini
-    yürüdür. Beləki Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt veniam modi itaque, vel ipsa explicabo dolorum similique maxime alias illo quisquam molestias! Dolor optio quos sapiente nemo, quae dolore eveniet.`;
   return (
     <div>
       <Header />
-      <div className="main">
-        <div className="main-menu">
-          <div className="container">
-            <div className="main-content">
-              <div className="main-left">
-                <h1>MyMentor təcrübə və inkişaf agentliyi</h1>
-                <p>40 gün ərzində karyeranıza ilk addımı bizimlə atın!</p>
-                <h2>95% Praktika!</h2>
-              </div>
-              <div className="main-right">
-                <div className="main-box"ref={boxRef}>
-                  <div className="main-image">
-                  <img src={mainImage} alt="" />
-                  </div>
-                  <div className="main-text">
-                    <p className="mymentor">
-                      MyMentorla <br /> Karyera qur!{" "}
-                    </p>
-                    <span>#Gəncistedadlar</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Main />
       <div className="numbers-section">
         <div className="container">
           <div className="numbers">
@@ -148,11 +82,12 @@ const Home = () => {
           <div className="container">
             <div className="education-text">
               <h2>Təhsil müəssisələrinə özəl!</h2>
-              <p>{isExpanded ? fullText : shortText}</p>
-              {/* <button onClick={handleToggleText}>
-                {isExpanded ? "Daha az göstər" : "Ətraflı"}
-              </button>  */}
-              <Link to="/education" >Ətraflı</Link>
+              <p>
+                MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
+                müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini
+                yürüdür. Beləki...
+              </p>
+              <Link to="/education">Ətraflı</Link>
             </div>
           </div>
         </div>
@@ -186,10 +121,10 @@ const Home = () => {
             <div className="marathon-card">
               <h1>Data analytics</h1>
               <p>
-                 Data Analitikası, məlumatları təhlil etmək,
-                filtrləmək, Pivot Table ilə xülasə yaratmaq və qrafiklərlə
-                vizuallaşdırmaqdan ibarətdir. Bu üsullarla analitiklər
-                məlumatdan dəyərli nəticələr əldə edirlər.
+                Data Analitikası, məlumatları təhlil etmək, filtrləmək, Pivot
+                Table ilə xülasə yaratmaq və qrafiklərlə vizuallaşdırmaqdan
+                ibarətdir. Bu üsullarla analitiklər məlumatdan dəyərli nəticələr
+                əldə edirlər.
               </p>
             </div>
             <div className="marathon-card-white">
@@ -498,20 +433,38 @@ const Home = () => {
                 </div>
 
                 <div className="form-group">
-                  <select id="program" name="Seçdiyi proqram" value={program} onChange={(e) => setProgram(e.target.value)} required >
+                  <select
+                    id="program"
+                    name="Seçdiyi proqram"
+                    value={program}
+                    onChange={(e) => setProgram(e.target.value)}
+                    required
+                  >
                     <option value="" disabled selected>
                       Marafon seçin
                     </option>
                     <option value="Datascience">Data science</option>
-                    <option value="Frontend proqramlaşdırma">Frontend proqramlaşdırma</option>
-                    <option value="Excel ilə Data analitikası">Excel ilə Data analitikası</option>
+                    <option value="Frontend proqramlaşdırma">
+                      Frontend proqramlaşdırma
+                    </option>
+                    <option value="Excel ilə Data analitikası">
+                      Excel ilə Data analitikası
+                    </option>
                     <option value="UI/UX design">UI/UX design</option>
                     <option value="Quality Assurance">Quality Assurance</option>
                   </select>
                 </div>
                 <div className="form-group">
-                  <select id="price" name="Seçdiyi paket" value={price} onChange={(e) => setPrice(e.target.value)} required >
-                    <option value="" disabled selected>Paket seçin</option>
+                  <select
+                    id="price"
+                    name="Seçdiyi paket"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Paket seçin
+                    </option>
                     <option value="Self-study">Self-study </option>
                     <option value="Next step job">Next step job </option>
                   </select>
@@ -531,7 +484,6 @@ const Home = () => {
         </div>
       </div>
       <Footer />
-<Gsap/>
     </div>
   );
 };
