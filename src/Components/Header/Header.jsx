@@ -13,11 +13,11 @@ const Header = () => {
               <span className="icon-text">MyMentor Internship & Development Agency</span>
             </Link>            
             <div className="navbar">
-              <Link to="#" >Ana səhifə</Link>
-              <Link to="#marathom">Marafonlar</Link>
-              <Link to="#about">Haqqımızda</Link>
+              <Link to="/" >Ana səhifə</Link>
+              <Link to="#marathon-section">Marafonlar</Link>
+              <Link to="/#about-section">Haqqımızda</Link>
               <Link to="/project-sell">Layihəni sat</Link>
-              <Link to="#contact">Müraciət et</Link>
+              <Link to="/#registerForm">Müraciət et</Link>
             </div>
           </div>
         </div>

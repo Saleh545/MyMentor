@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Header from "../Components/Header/Header";
 import mainImage from "../../public/Images/MainImage.png";
 import icon from "../../public/Images/icon.jpg";
@@ -10,6 +10,9 @@ import studentImg from "../../public/Images/bg-img.png";
 import Swal from "sweetalert2";
 import { useForm, } from "@formspree/react";
 import { Link, useLocation } from "react-router-dom";
+import Gsap from "../Components/Gsap";
+import { gsap } from "gsap";
+
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -54,6 +57,34 @@ const Home = () => {
       }
     }
   }, [location]);
+   const boxRef = useRef(null);
+
+   useEffect(() => {
+    gsap.from(boxRef.current, {
+      x: 500, // Sağdan 500px uzaklıktan başlasın
+      opacity: 0, // Başlangıçta şeffaf
+      duration: 1.5, // 1.5 saniye süresince animasyon
+    });
+  }, []);
+  useEffect(() => {
+    gsap.from(".main-left h1", {
+      x: -200, // Sol taraftan 200px uzaklık
+      opacity: 0, // Başlangıçta şeffaf
+      duration: 1, // 1 saniyede animasyonu bitir
+    });
+    gsap.from(".main-left p", {
+      x: -200,
+      opacity: 0,
+      duration: 1,
+      delay: 0.3, // H1 animasyonu bittikten 0.3 saniye sonra başlasın
+    });
+    gsap.from(".main-left h2", {
+      x: -200,
+      opacity: 0,
+      duration: 1,
+      delay: 0.6, // P animasyonu bittikten 0.6 saniye sonra başlasın
+    });
+  }, []);
 
   const shortText = `MyMentor təcrübə və inkişaf agentliyi, özəl və dövlət təhsil
     müəsisələrinə özəl xüsusi təklif planı ilə öz siyasətini
@@ -75,7 +106,7 @@ const Home = () => {
                 <h2>95% Praktika!</h2>
               </div>
               <div className="main-right">
-                <div className="main-box">
+                <div className="main-box"ref={boxRef}>
                   <div className="main-image">
                   <img src={mainImage} alt="" />
                   </div>
@@ -127,7 +158,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="marathon-section">
+      <div className="marathon-section" id="marathon-section">
         <div className="container">
           <div className="marathon">
             <h2>40 Günlük Marafonlar</h2>
@@ -153,9 +184,9 @@ const Home = () => {
               </p>
             </div>
             <div className="marathon-card">
-              <h1>Excel ilə Data analitikası</h1>
+              <h1>Data analytics</h1>
               <p>
-                Excel ilə Data Analitikası, məlumatları təhlil etmək,
+                 Data Analitikası, məlumatları təhlil etmək,
                 filtrləmək, Pivot Table ilə xülasə yaratmaq və qrafiklərlə
                 vizuallaşdırmaqdan ibarətdir. Bu üsullarla analitiklər
                 məlumatdan dəyərli nəticələr əldə edirlər.
@@ -218,7 +249,7 @@ const Home = () => {
                       <h4>70AZN</h4>
                     </div>
                   </div>
-                  <Link to="/#registerForm">Müraciət</Link>
+                  <Link to="#registerForm">Müraciət</Link>
                 </div>
               </div>
               <div className="packet-card">
@@ -323,7 +354,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="about-section">
+      <div className="about-section" id="about-section">
         <div className="container">
           <div className="about">
             <div className="about-flex">
@@ -500,6 +531,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
+<Gsap/>
     </div>
   );
 };
