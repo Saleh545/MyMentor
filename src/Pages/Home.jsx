@@ -92,7 +92,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="marathon-section">
+      <div className="marathon-section" id="marathon-section">
         <div className="container">
           <div className="marathon">
             <h2>40 Günlük Marafonlar</h2>
@@ -288,7 +288,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="about-section">
+      <div className="about-section" id="about-section">
         <div className="container">
           <div className="about">
             <div className="about-flex">

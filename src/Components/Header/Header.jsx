@@ -15,9 +15,9 @@ const Header = () => {
             <div className="navbar">
               <Link to="/" >Ana səhifə</Link>
               <Link to="#marathon-section">Marafonlar</Link>
-              <Link to="/#about-section">Haqqımızda</Link>
+              <Link to="#about-section">Haqqımızda</Link>
               <Link to="/project-sell">Layihəni sat</Link>
-              <Link to="/#registerForm">Müraciət et</Link>
+              <Link to="#registerForm">Müraciət et</Link>
             </div>
           </div>
         </div>
