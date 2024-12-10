@@ -13,6 +13,9 @@
         color: #fff;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
         font-weight: 700;
+        @media (max-width: 576px) {
+          font-size: 20px;
+          }
       }
       .tel {
         display: flex;
@@ -31,8 +34,11 @@
         }
         a {
           font-size: 18px;
-        color: #fff;
+          color: #fff;
           font-weight: 700;
+          @media (max-width: 576px) {
+            font-size: 16px;
+            }
         }
       }
       .mail {
@@ -52,8 +58,11 @@
         }
         a {
           font-size: 18px;
-        color: #fff;
+          color: #fff;
           font-weight: 700;
+          @media (max-width: 576px) {
+            font-size: 16px;
+            }
         }
       }
     }
@@ -70,6 +79,9 @@
         color: #fff;
         font-size: 20px;
         font-weight: 700;
+        @media (max-width: 576px) {
+          font-size: 17px;
+        }
       }
     }
   }

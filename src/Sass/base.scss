@@ -1,8 +1,7 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  // overflow-x: hidden !important;
 }
 
 * {
@@ -18,7 +17,6 @@ body {
   line-height: normal !important;
 }
 .container {
-  // max-width: 1440px !important;
   margin: 0 auto !important;
   --bs-gutter-x: 0 !important;
 }

@@ -8,7 +8,7 @@ const Main = () => {
 
     useEffect(() => {
      gsap.from(boxRef.current, {
-       x: 500, 
+       x: 200, 
        opacity: 0, 
        duration: 1.5, 
      });

@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Components/Header/Header";
-import Main from "../Components/Main/Main";
 import icon from "../../public/Images/icon.jpg";
 import { Accordion } from "react-bootstrap";
 import Footer from "../Components/Footer/Footer";
@@ -10,14 +9,13 @@ import studentImg from "../../public/Images/bg-img.png";
 import Swal from "sweetalert2";
 import { useForm } from "@formspree/react";
 import { Link, useLocation } from "react-router-dom";
-import { gsap } from "gsap";
+import Main from "../Components/Main/Main";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [program, setProgram] = useState("");
   const [price, setPrice] = useState("");
-
   const [state, handleSubmit] = useForm("mqakoepl");
 
   const handleCustomSubmit = (e) => {
@@ -33,7 +31,6 @@ const Home = () => {
     setPhone("");
     setProgram("");
     setPrice("");
-    setMessage("");
   };
   const handleFormSubmit = async (e) => {
     await handleSubmit(e);
@@ -41,6 +38,9 @@ const Home = () => {
   };
   const [isExpanded, setIsExpanded] = useState(false);
 
+  const handleToggleText = () => {
+    setIsExpanded(!isExpanded);
+  };
   const location = useLocation();
 
   useEffect(() => {
@@ -51,11 +51,10 @@ const Home = () => {
       }
     }
   }, [location]);
-
   return (
     <div>
       <Header />
-      <Main />
+     <Main/>
       <div className="numbers-section">
         <div className="container">
           <div className="numbers">
@@ -93,7 +92,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="marathon-section" id="marathon-section">
+      <div className="marathon-section">
         <div className="container">
           <div className="marathon">
             <h2>40 Günlük Marafonlar</h2>
@@ -109,7 +108,7 @@ const Home = () => {
               </p>
             </div>
             <div className="marathon-card-white">
-              <h1>Front-end proqramlaşdırma</h1>
+              <h1>Frontend proqramlaşdırma</h1>
               <p>
                 Front-End proqramlaşdırma, istifadəçinin gördüyü və qarşılıqlı
                 əlaqədə olduğu veb səhifələri HTML, CSS və JavaScript ilə
@@ -184,7 +183,7 @@ const Home = () => {
                       <h4>70AZN</h4>
                     </div>
                   </div>
-                  <Link to="#registerForm">Müraciət</Link>
+                  <Link to="/#registerForm">Müraciət</Link>
                 </div>
               </div>
               <div className="packet-card">
@@ -289,7 +288,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="about-section" id="about-section">
+      <div className="about-section">
         <div className="container">
           <div className="about">
             <div className="about-flex">
@@ -444,12 +443,8 @@ const Home = () => {
                       Marafon seçin
                     </option>
                     <option value="Datascience">Data science</option>
-                    <option value="Frontend proqramlaşdırma">
-                      Frontend proqramlaşdırma
-                    </option>
-                    <option value="Excel ilə Data analitikası">
-                      Excel ilə Data analitikası
-                    </option>
+                    <option value="Frontend proqramlaşdırma">Frontend proqramlaşdırma</option>
+                    <option value="Data analytics">Data analytics</option>
                     <option value="UI/UX design">UI/UX design</option>
                     <option value="Quality Assurance">Quality Assurance</option>
                   </select>
