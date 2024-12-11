@@ -1,46 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Header/Header";
-import icon from "../../public/Images/icon.jpg";
 import { Accordion } from "react-bootstrap";
 import Footer from "../Components/Footer/Footer";
 import hat from "../../public/Images/hat-left.png";
 import girl from "../../public/Images/sumkali-qiz.jpg";
 import studentImg from "../../public/Images/bg-img.png";
 import Swal from "sweetalert2";
-import { useForm } from "@formspree/react";
 import { Link, useLocation } from "react-router-dom";
 import Main from "../Components/Main/Main";
+import emailjs from "emailjs-com";
+import About from "../Components/About/About";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [program, setProgram] = useState("");
   const [price, setPrice] = useState("");
-  const [state, handleSubmit] = useForm("mqakoepl");
-
-  const handleCustomSubmit = (e) => {
-    e.preventDefault();
-    Swal.fire({
-      position: "top-center",
-      icon: "success",
-      title: "Mesajınız göndərildi!",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-    setName("");
-    setPhone("");
-    setProgram("");
-    setPrice("");
-  };
-  const handleFormSubmit = async (e) => {
-    await handleSubmit(e);
-    handleCustomSubmit(e);
-  };
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleToggleText = () => {
-    setIsExpanded(!isExpanded);
-  };
   const location = useLocation();
 
   useEffect(() => {
@@ -51,10 +26,53 @@ const Home = () => {
       }
     }
   }, [location]);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_407w2fa",
+        "template_5kasmrn",
+        {
+          name: name,
+          phone: phone,
+          program: program,
+          price: price,
+        },
+        "z4SjYjNzvzPJxGBEo"
+      )
+      .then(
+        (result) => {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Mesajınız göndərildi!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          setName("");
+          setPhone("");
+          setProgram("");
+          setPrice("");
+        },
+        (error) => {
+          Swal.fire({
+            position: "top-center",
+            icon: "error",
+            title: "Xəta baş verdi .",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          console.error("Hata:", error);
+        }
+      );
+  };
+
   return (
     <div>
       <Header />
-     <Main/>
+      <Main />
       <div className="numbers-section">
         <div className="container">
           <div className="numbers">
@@ -288,69 +306,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="about-section" id="about-section">
-        <div className="container">
-          <div className="about">
-            <div className="about-flex">
-              <div className="about-left">
-                <h2>Haqqımızda</h2>
-                <p>
-                  MyMentor Agency, fərqli sahələrdə özünü inkişaf etdirmək
-                  istəyən şəxslərə 40 günlük marafonlar vasitəsilə dəstək
-                  göstərən bir təlim platformasıdır. Bu marafonlar çərçivəsində
-                  iştirakçılar hərtərəfli hazırlıq prosesindən keçir, praktiki
-                  tapşırıqlar, mentorluq görüşləri və daimi izləmə ilə
-                  dəstəklənir. Marafonlar 5 əsas istiqaməti əhatə edir və hər
-                  bir iştirakçının fərdi hədəflərinə uyğun təlim proqramı təqdim
-                  olunur. Bu platforma, öyrənmə və inkişaf yolunda olanlara
-                  güclü bir təkan verərək, onların bacarıqlarını artırmaq və
-                  hədəflərinə çatmaq üçün zəruri istiqaməti təmin edir.
-                </p>
-              </div>
-              <div className="about-right">
-                <div className="about-img">
-                  <img src={icon} alt="" />
-                </div>
-                <p>
-                  MyMentor Internship &<br /> Development Agency
-                </p>
-              </div>
-            </div>
-            <div className="about-flags">
-              <div className="flag-img">
-                <img
-                  src="https://media-public.canva.com/aZIQA/MAEEUuaZIQA/1/t.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="flag-img">
-                <img
-                  src="https://media-public.canva.com/jo8eo/MAEErEjo8eo/1/t.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="flag-img">
-                <img
-                  src="https://media-public.canva.com/EGep4/MAEE5ZEGep4/1/t.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="flag-img">
-                <img
-                  src="https://media-public.canva.com/MADBrU7ZTEM/1/thumbnail-1.jpg"
-                  alt=""
-                />
-              </div>
-              <div className="flag-img">
-                <img
-                  src="https://media-public.canva.com/MAC70Ixyhto/1/thumbnail-1.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <About />
 
       <div className="questions-section">
         <div className="container">
@@ -406,12 +362,12 @@ const Home = () => {
               <h1>Qeydiyyat formu</h1>
             </div>
             <div className="register-form">
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={sendEmail}>
                 <div className="form-group">
                   <input
                     type="text"
                     id="name"
-                    name="Adı Soyadı"
+                    name="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -422,28 +378,29 @@ const Home = () => {
                   <input
                     type="tel"
                     id="phone"
-                    name="Telefon Nömrəsi"
+                    name="phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                    placeholder="Mobil (WhatsApp) 0501234567 "
+                    placeholder="Mobil (WhatsApp) 0501234567"
                     required
                   />
                 </div>
-
                 <div className="form-group">
                   <select
                     id="program"
-                    name="Seçdiyi proqram"
+                    name="program"
                     value={program}
                     onChange={(e) => setProgram(e.target.value)}
                     required
                   >
-                    <option value="" disabled selected>
+                    <option value="" disabled>
                       Marafon seçin
                     </option>
                     <option value="Datascience">Data science</option>
-                    <option value="Frontend proqramlaşdırma">Frontend proqramlaşdırma</option>
+                    <option value="Frontend proqramlaşdırma">
+                      Frontend proqramlaşdırma
+                    </option>
                     <option value="Data analytics">Data analytics</option>
                     <option value="UI/UX design">UI/UX design</option>
                     <option value="Quality Assurance">Quality Assurance</option>
@@ -452,32 +409,27 @@ const Home = () => {
                 <div className="form-group">
                   <select
                     id="price"
-                    name="Seçdiyi paket"
+                    name="price"
                     value={price}
                     onChange={(e) => setPrice(e.target.value)}
                     required
                   >
-                    <option value="" disabled selected>
+                    <option value="" disabled>
                       Paket seçin
                     </option>
-                    <option value="Self-study">Self-study </option>
-                    <option value="Next step job">Next step job </option>
+                    <option value="Self-study">Self-study</option>
+                    <option value="Next step job">Next step job</option>
                   </select>
                 </div>
                 <div className="form-group">
-                  <button
-                    type="submit"
-                    onSubmit={handleSubmit}
-                    disabled={state.submitting}
-                  >
-                    Göndər
-                  </button>
+                  <button type="submit">Göndər</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
