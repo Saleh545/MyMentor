@@ -90,7 +90,13 @@ header {
         display: block; 
         z-index: 99999;
         color: #fff;
-      }
+
+        .hamburger-react{
+          div{
+            width: 30px !important;
+          }
+        }
+}
     }
   }
 }
