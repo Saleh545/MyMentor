@@ -46,7 +46,7 @@ header {
       display: flex;
       align-items: center;
       gap: 35px;
-      transition: transform 0.7s ease, opacity 0.8s ease;
+      transition: transform 0.9s ease, opacity 0.8s ease;
       @media (max-width: 576px) {
         flex-direction: column;
         position: absolute;
