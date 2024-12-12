@@ -1,30 +1,26 @@
 import React, { useState, useEffect } from "react";
 import icon from "../../../public/Images/MyMentor.jpg";
 import { Link } from "react-router-dom";
-import { Fade as Hamburger } from 'hamburger-react';  // Import the Hamburger component
+import { Fade as Hamburger } from 'hamburger-react';
 
 const Header = () => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Disable scrolling when the navbar is open
     if (isOpen) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
 
-    // Clean up the class when the component unmounts
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  }, [isOpen]); // Trigger on isOpen change
+  }, [isOpen]);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
-
 
   return (
     <div>
@@ -36,12 +32,10 @@ const Header = () => {
               <span className="icon-text">MyMentor Internship & Development Agency</span>
             </Link>
 
-            {/* Hamburger Menu */}
             <div className="hamburger-menu">
               <Hamburger toggled={isOpen} toggle={setIsOpen} />
             </div>
 
-            {/* Navbar links */}
             <div className={`navbar ${isOpen ? "open" : ""}`}>
               <Link to="/" className="navbar-link" onClick={toggleNavbar}>Ana səhifə</Link>
               <Link to="/#marathon-section" className="navbar-link" onClick={toggleNavbar}>Marafonlar</Link>

@@ -16,7 +16,10 @@ body {
   line-height: normal !important;
   overflow-x: hidden !important;
 }
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100%; 
+}
 .container {
   margin: 0 auto !important;
-  // --bs-gutter-x: 0 !important;
 }
