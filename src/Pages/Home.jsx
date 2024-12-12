@@ -30,7 +30,7 @@ const Home = () => {
     // Veri yükleme işlemini simüle edelim
     setTimeout(() => {
       setIsLoading(false); // 3 saniye sonra yüklenme tamamlanır
-    }, 9000);
+    }, 2000);
   }, []); 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
