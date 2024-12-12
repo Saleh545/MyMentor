@@ -1,0 +1,50 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ekranın tamamını kapla */
+  background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam arka plan */
+}
+
+.loading-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px; /* Konteynerin genişliği */
+  height: 150px; /* Konteynerin yüksekliği */
+  border-radius: 50%; /* Konteyneri dairesel yap */
+  border: 5px solid #fff; /* Beyaz kenarlık */
+  overflow: hidden; /* İçeriğin daireyi taşmaması için */
+  animation: bounce 1s ease-in-out infinite, spin 2s linear infinite; /* Dönen ve fırlayan animasyonlar */
+}
+
+.loading-icon {
+  width: 100px; /* Fotoğraf boyutunu ayarla */
+  height: 100px; /* Fotoğraf boyutunu ayarla */
+  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
+  border-radius: 50%; /* Dairesel yap */
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: scale(1); /* Başlangıç boyutu */
+    border-width: 5px; /* Başlangıçta normal kenarlık */
+  }
+  50% {
+    transform: scale(1.1); /* Yükselme, büyüme */
+    border-width: 13px; /* Kenarlığın fırlaması */
+  }
+  100% {
+    transform: scale(1); /* Sonraki döngüde eski boyuta dönme */
+    border-width: 5px; /* Kenarlık eski haline döner */
+  }
+}
+
+.loading-container p {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: bold;
+}

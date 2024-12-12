@@ -10,13 +10,80 @@ import { Link, useLocation } from "react-router-dom";
 import Main from "../Components/Main/Main";
 import emailjs from "emailjs-com";
 import About from "../Components/About/About";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Loading from "./Loading";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [program, setProgram] = useState("");
   const [price, setPrice] = useState("");
+
   const location = useLocation();
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Veri yükleme işlemini simüle edelim
+    setTimeout(() => {
+      setIsLoading(false); // 3 saniye sonra yüklenme tamamlanır
+    }, 9000);
+  }, []); 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(".middle-number h4", 
+      { opacity: 0 }, 
+      { 
+        opacity: 1, 
+        duration: 2, 
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: ".numbers-section", 
+          start: "top bottom",
+          end: "bottom top",
+          once: true, 
+          scrub: false, 
+        }
+      });
+
+    
+    gsap.fromTo(".left-number", 
+      { x: -200, opacity: 0 }, 
+      { 
+        x: 0, 
+        opacity: 1, 
+        duration: 2, 
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: ".numbers-section",
+          start: "top bottom",
+          end: "bottom top",
+          once: true,
+          scrub: false,
+        }
+      });
+
+    gsap.fromTo(".right-number", 
+      { x: 200, opacity: 0 }, 
+      { 
+        x: 0, 
+        opacity: 1, 
+        duration: 2, 
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: ".numbers-section",
+          start: "top bottom",
+          end: "bottom top",
+          once: true, 
+          scrub: false,
+        }
+      });
+  }, []);
+
 
   useEffect(() => {
     if (location.hash) {
@@ -71,26 +138,37 @@ const Home = () => {
 
   return (
     <div>
+        {isLoading ? (
+        <Loading /> // Yükleniyor, Loading bileşeni görünür
+      ) : (
+        <div>
+          {/* Yükleme tamamlandıktan sonra sayfanın geri kalanını göster */}
+
+
+
+          
+        
       <Header />
       <Main />
       <div className="numbers-section">
-        <div className="container">
-          <div className="numbers">
-            <div className="number">
-              <h4>6</h4>
-              <p>Marafon sayı</p>
-            </div>
-            <div className="number">
-              <h4>60+</h4>
-              <p>Tələbə sayı</p>
-            </div>
-            <div className="number">
-              <h4>15+</h4>
-              <p>İşə qəbul</p>
-            </div>
+      <div className="container">
+        <div className="numbers">
+          <div className="number left-number">
+            <h4>6</h4>
+            <p>Marafon sayı</p>
+          </div>
+          <div className="number middle-number">
+            <h4>60+</h4>
+            <p>Tələbə sayı</p>
+          </div>
+          <div className="number right-number">
+            <h4>15+</h4>
+            <p>İşə qəbul</p>
           </div>
         </div>
       </div>
+    </div>
+
       <div className="education-section">
         <div className="bck-image">
           <img src={studentImg} alt="" />
@@ -305,9 +383,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <About />
-
       <div className="questions-section">
         <div className="container">
           <div className="questions">
@@ -431,6 +507,9 @@ const Home = () => {
       </div>
 
       <Footer />
+        {/* Diğer bileşenler burada yer alacak */}
+        </div>
+      )}
     </div>
   );
 };

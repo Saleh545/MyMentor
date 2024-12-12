@@ -212,7 +212,7 @@
       h2 {
         font-size: 45px;
         @media (max-width: 576px) {
-          font-size: 40px;
+          font-size: 35px;
         }
         font-weight: 700;
         color: #fff;
@@ -248,6 +248,7 @@
         font-size: 15px;
         background-color: #fff;
         color: black;
+        transition: all 0.2s ease-in-out;
         &:hover{
           background-color: #2b0d4c;
           color: #fff;
@@ -828,7 +829,7 @@
       margin-top: 20px;
       font-weight: 700;
       @media (max-width: 576px) {
-        font-size: 30px;
+        font-size: 25px;
       }
     }
     .accordion {
@@ -848,7 +849,7 @@
           font-weight: 700;
           color: $darkBlue !important;
           @media (max-width: 576px) {
-            font-size: 17px;
+            font-size: 15px;
           }
           &:not(.collapsed) {
             background-color: transparent !important;
