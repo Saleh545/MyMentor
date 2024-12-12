@@ -1,6 +1,5 @@
 import React from 'react';
-import icon from "../../public/Images/icon.jpg"; // Görselin doğru yolu
-
+import icon from "../../public/Images/icon.jpg";
 const Loading = () => {
   return (
     <div className="loading-container">

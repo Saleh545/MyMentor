@@ -27,9 +27,8 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Veri yükleme işlemini simüle edelim
     setTimeout(() => {
-      setIsLoading(false); // 3 saniye sonra yüklenme tamamlanır
+      setIsLoading(false); 
     }, 2000);
   }, []); 
   useEffect(() => {
@@ -139,16 +138,10 @@ const Home = () => {
   return (
     <div>
         {isLoading ? (
-        <Loading /> // Yükleniyor, Loading bileşeni görünür
+        <Loading />
       ) : (
         <div>
-          {/* Yükleme tamamlandıktan sonra sayfanın geri kalanını göster */}
-
-
-
-          
-        
-      <Header />
+           <Header />
       <Main />
       <div className="numbers-section">
       <div className="container">
