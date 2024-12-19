@@ -140,7 +140,7 @@ const Home = () => {
         {isLoading ? (
         <Loading />
       ) : (
-        <div>
+        <div >
            <Header />
       <Main />
       <div className="numbers-section">
@@ -500,7 +500,6 @@ const Home = () => {
       </div>
 
       <Footer />
-        {/* Diğer bileşenler burada yer alacak */}
         </div>
       )}
     </div>

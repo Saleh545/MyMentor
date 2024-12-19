@@ -3,16 +3,16 @@
   .main-menu {
     background-color: $darkBlue !important  ;
     padding: 0 40px;
-    .main-content {
+   .main-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 83vh;
+      height: 100vh;
+      padding-top: 130px;
       @media (max-width: 576px) {
         height: 100vh;
         flex-direction: column;
-        padding: 30px 15px;
-      }
+        justify-content: center;    }
       .main-left {
         width: 50%;
         @media (max-width: 576px) {

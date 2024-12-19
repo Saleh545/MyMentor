@@ -23,9 +23,8 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <header>
         <div className="container">
+      <header>
           <div className="header">
             <Link to="/" className="left">
               <div className="left-img"><img src={icon} alt="icon" /></div>
@@ -44,9 +43,8 @@ const Header = () => {
               <Link to="/#registerForm" className="navbar-link" onClick={toggleNavbar}>Müraciət et</Link>
             </div>
           </div>
-        </div>
       </header>
-    </div>
+      </div>
   );
 };
 
