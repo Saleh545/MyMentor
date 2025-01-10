@@ -1,12 +1,15 @@
 .education-page {
-  background-color: #130624;
+  background-color: #130624;  
   .education-text {
-      padding: 60px 20px;
-
+    padding: 60px 20px;
     h2 {
+      margin-top: 10% !important;
       color: #fff;
       font-size: 25px;
       font-weight: 700;
+      @media (max-width: 576px) {
+        margin-top: 15% !important;
+      }
     }
     p {
       color: #fff;
@@ -29,41 +32,40 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 20px;
-    form {      
+    form {
       width: 50%;
       margin-top: 40px;
       @media (max-width: 576px) {
         width: 100%;
       }
       .form-group {
-          margin-top: 20px;
+        margin-top: 20px;
         input {
-            outline: none;
-            border: none;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 10px;
-            width: 100%;
-            background-color: #130624;
-            color: #fff;
-          }
-          ::placeholder {
-            color: #fff;
-            font-size: 17px;
-            font-weight: 700;
-          }
-          button {
-            border: none;
-            outline: none;
-            border-radius: 20px;
-            background-color: #fff;
-            color: black;
-            padding: 10px 20px;
-            font-weight: 700;
-            float: right;
-            
-          }
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #fff;
+          padding-bottom: 10px;
+          width: 100%;
+          background-color: #130624;
+          color: #fff;
+        }
+        ::placeholder {
+          color: #fff;
+          font-size: 17px;
+          font-weight: 700;
+        }
+        button {
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          background-color: #fff;
+          color: black;
+          padding: 10px 20px;
+          font-weight: 700;
+          float: right;
+        }
       }
-      .appText{
+      .appText {
         margin-top: 100px;
       }
     }

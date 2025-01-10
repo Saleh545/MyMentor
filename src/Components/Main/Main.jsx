@@ -15,7 +15,7 @@ const Main = () => {
    }, []);
    useEffect(() => {
      gsap.from(".main-left h1", {
-       x: -200, // Sol taraftan 200px uzaklık
+       x: -200, 
        opacity: 0,
        duration: 1,
      });

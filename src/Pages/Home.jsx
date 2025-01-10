@@ -495,8 +495,7 @@ const Home = () => {
                         name="program"
                         value={program}
                         onChange={(e) => setProgram(e.target.value)}
-                        required
-                      >
+                        required>
                         <option value="" disabled>
                           Marafon seçin
                         </option>

@@ -33,27 +33,28 @@ const Education = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
-
   return (
-    <div className="education-page">
+    <div>
       <Header />
+    <div className="education-page">
       <div className="container">
+        
         <div className="education-text">
           <h2>Özəl və dövlət ali təhsil müəssisələrinə özəl təklif:</h2>
           <p>
-            Özəl və dövlət ali təhsil müəssisələrinə özəl təklif: Özəl və dövlət
-            ali təhsil müəssisələrinə özəl MyMentor agentliyi 40 günlük 95%
-            praktikadan ibarət marafonlar təqdim edir. Marafon ərzində tələbələr
-            İT sahəsində olan yeniliklərdən, müraciət etdiyi ixtisas üzrə yeni
-            biliklər əldə edəcəklər. Tədris online/offline formatda həyata
-            keçirilir. Hər bir istiqamət üzrə minimum 10-15 maksimum 20-25
-            müraciət qəbul edilir. Həftədə 2 dəfə 2 saat olmaqla. Əsasən həftə
-            içi 19.00-22.00 aralığında həftə sonu isə 12.00-20.00 aralığında
-            həyata keçirilir. (istəkdən asılı olaraq tədris vaxtı dəyişdirilə
-            bilər). Tədris keyfiyətinin ölçülməsi məqsədi ilə marafonun sonunda
-            hər bir tələbə şəxsi portfoliolarına əlavə etmək üçün bir proyekt
-            üzərində işləyir və təqdim edirlər. Sonda hər bir tələbə rəsmi
-            sertifikatla təltif edilir.
+            Özəl və dövlət ali təhsil müəssisələrinə özəl MyMentor agentliyi 40
+            günlük 95% praktikadan ibarət marafonlar təqdim edir. Marafon
+            ərzində tələbələr İT sahəsində olan yeniliklərdən, müraciət etdiyi
+            ixtisas üzrə yeni biliklər əldə edəcəklər. Tədris online/offline
+            formatda həyata keçirilir. Hər bir istiqamət üzrə bir qrupa minimum
+            15 maksimum 20-25 müraciət qəbul edilir. Proqram həftədə 2 dəfə 2
+            saat olmaqla davam edir.
+          </p>
+          <p>
+            Tədris keyfiyətinin ölçülməsi məqsədi ilə marafonun sonunda hər bir
+            tələbə şəxsi portfoliolarına əlavə etmək üçün bir proyekt üzərində
+            işləyir və təqdim edirlər. Sonda hər bir tələbə rəsmi sertifikatla
+            təltif edilir.
           </p>
           <p>
             Qəbul prosesi: <br />
@@ -68,8 +69,9 @@ const Education = () => {
             rəhbərliyi ilə birgə müzakirə əsasında təyin edilir.
           </p>
           <p>
-            Marafon ödənişləri. <br /> Bütün istiqamətlər üzrə ödənişlər 200 azn
-            (birdəfəlik) təşkil edir.
+            Marafon ödənişləri. <br /> Bütün istiqamətlər üzrə ödənişlər təqaüdsüz 249 azn (birdəfəlik) təşkil edir.
+
+
           </p>
         </div>
 
@@ -127,6 +129,8 @@ const Education = () => {
         </div>
       </div>
     </div>
+    </div>
+
   );
 };
 
