@@ -9,7 +9,7 @@
       justify-content: space-between;
       height: 100vh;
       padding-top: 130px;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
@@ -17,7 +17,7 @@
       }
       .main-left {
         width: 50%;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           width: 100%;
         }
         h1 {
@@ -28,10 +28,13 @@
           text-decoration: none;
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
           font-size: 35px;
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             font-size: 30px;
             text-align: center;
           }
+          @media (max-width: 768px), (max-width: 991px) {
+            font-size:35px ;
+            }
         }
         p {
           font-weight: 700;
@@ -39,22 +42,28 @@
           color: rgb(255, 255, 255);
           font-kerning: none;
           text-decoration: none;
-          font-size: 19px;
+          font-size: 20px;
           margin-top: 30px;
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             font-size: 18px;
             text-align: center;
           }
+          @media (max-width: 768px), (max-width: 991px) {
+            font-size:19px ;
+            }
         }
         h2 {
           color: #fff;
           font-size: 40px;
           margin-top: 60px;
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             font-size: 35px;
             margin-bottom: 20px !important;
             margin-top: 30px;
             text-align: center;
+          }
+          @media (max-width: 768px), (max-width: 991px) {
+          font-size:40px ;
           }
         }
       }
@@ -63,19 +72,26 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media (max-width: 768px), (max-width: 991px) {
+margin-top: 50px;          }
 
         .main-box {
           border: 3px solid #ffffff;
           border-radius: 50px;
           transform: rotate(6.76deg);
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             transform: rotate(0);
           }
           .main-image {
-            @media (max-width: 576px) {
+            @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
               width: 250px;
               height: 250px;
             }
+            @media (max-width: 768px), (max-width: 991px) {
+              width: 300px;
+              height: 300px;
+            }
+
 
             img {
               width: 100%;
@@ -95,7 +111,7 @@
             .mymentor {
               font-size: 40px;
               color: #fff;
-              @media (max-width: 576px) {
+             @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
                 font-size: 30px;
               }
             }
@@ -104,7 +120,7 @@
               color: #fff;
               font-size: 25px;
               display: inline-block;
-              @media (max-width: 576px) {
+             @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
                 font-size: 20px;
               }
             }
@@ -120,7 +136,7 @@
   margin: 90px 0 !important;
   .numbers {
     display: flex;
-    @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
       flex-direction: column;
       gap: 20px;
     }
@@ -134,14 +150,14 @@
       background-color: $darkBlue;
       border-radius: 40px;
       text-align: center;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         width: 100%;
       }
       h4 {
         color: #fff;
         font-size: 35px;
         font-weight: 700;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           font-size: 30px;
         }
       }
@@ -151,7 +167,7 @@
           sans-serif;
         font-size: 20px;
         font-weight: 700;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           font-size: 20px;
         }
       }
@@ -202,18 +218,18 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 75px;
-    @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
       padding: 0 15px;
     }
     .education-text {
       width: 60%;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         width: 100%;
       }
 
       h2 {
         font-size: 45px;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           font-size: 35px;
         }
         font-weight: 700;
@@ -226,7 +242,7 @@
         color: #fff;
         font-weight: 700;
         font-size: 25px;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           font-size: 22px;
         }
         margin-top: 50px;
@@ -274,7 +290,7 @@
       color: #fff;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
       font-size: 50px;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         font-size: 30px;
       }
     }
@@ -293,7 +309,7 @@
       height: 150px;
       justify-content: space-between;
       overflow: hidden;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         width: 100%;
         height: auto;
         flex-direction: column;
@@ -307,7 +323,7 @@
         text-align: left;
         font-weight: 700;
         width: 50%;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           font-size: 25px;
           text-align: center;
           margin-bottom: 10px !important;
@@ -323,7 +339,7 @@
         width: 71%;
         text-align: left;
         font-weight: 700;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           width: 100%;
           font-size: 16px;
         }
@@ -342,7 +358,7 @@
         font-size: 30px;
         width: 50%;
         font-weight: 700;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           font-size: 25px;
           width: 100%;
           text-align: center;
@@ -359,7 +375,7 @@
         font-weight: 700;
         word-spacing: -1.5px;
         text-wrap: wrap;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           width: 100%;
           line-height: 1.4;
           font-size: 15px;
@@ -367,7 +383,7 @@
       }
     }
 
-    @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
       .marathon-card-white {
         flex-wrap: wrap;
       }
@@ -389,7 +405,7 @@
       text-align: center;
       font-weight: 700;
       z-index: -1;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         display: none;
       }
     }
@@ -400,7 +416,7 @@
         color: $darkBlue;
         font-weight: 700;
         font-size: 45px;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           font-size: 30px;
         }
       }
@@ -412,7 +428,7 @@
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
         letter-spacing: 0.5px;
         margin-top: 5px;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           font-size: 18px;
           margin-bottom: 20px !important;
         }
@@ -422,10 +438,11 @@
     .packet-flex {
       display: flex;
       justify-content: space-around;
-      align-items: stretch;
+      align-items: center;
+      justify-content: center;
       margin-top: 60px;
 
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         flex-direction: column;
         gap: 30px;
       }
@@ -438,15 +455,20 @@
         flex-direction: column; /* Ensure items are stacked vertically */
         justify-content: space-between; /* Distribute space between elements */
 
-        @media (max-width: 576px) {
-          width: 100%;
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
+         width: 100%;
         }
+        @media(max-width: 768px), (max-width: 991px) {
+width: 70%;
+        }
+        
+        
 
         h5 {
           font-size: 30px;
           color: $darkBlue;
           font-weight: 700;
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             font-size: 27px;
           }
         }
@@ -459,9 +481,12 @@
           padding: 0 10px;
           flex-grow: 1;
           margin-bottom: 7px !important;
-          @media (max-width: 576px) {
-            font-size: 18px;
-            padding: 0 15px;
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
+           font-size: 15px;
+           padding: 0 5px;
+          }
+          @media (max-width: 768px), (max-width: 991px) {
+font-size: 18px;
           }
         }
 
@@ -473,7 +498,6 @@
           flex-direction: column;
           align-items: center;
           padding: 30px 0;
-          justify-content: space-between;
           height: 100%;
 
           .card-img {
@@ -483,7 +507,7 @@
             width: 129px;
             height: 125px;
             transform: rotate(-12.24deg);
-            @media (max-width: 576px) {
+           @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
               width: 100px;
               height: 100px;
               left: -40px;
@@ -501,7 +525,7 @@
             width: 129px;
             height: 125px;
             transform: scaleX(-1) rotate(-15deg);
-            @media (max-width: 576px) {
+           @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
               width: 100px;
               height: 100px;
               right: -40px;
@@ -547,7 +571,7 @@
                 font-size: 15px;
                 color: #fff;
                 font-weight: 700;
-                @media (max-width: 576px) {
+               @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
                   font-size: 17px;
                 }
               }
@@ -556,7 +580,7 @@
                 font-size: 35px;
                 color: #fff;
                 font-weight: 700;
-                @media (max-width: 576px) {
+               @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
                   font-size: 27px;
                 }
               }
@@ -576,7 +600,11 @@
             margin-top: 20px;
             background-color: #fff;
             color: #000000;
-            @media (max-width: 576px) {
+            &:hover{
+              background-color: #260b44;
+              color: #fff;
+            }
+           @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
               font-size: 20px;
               padding: 10px 30px;
             }
@@ -593,7 +621,7 @@
   .student-flex {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -604,7 +632,7 @@
       font-weight: 700;
       font-size: 46px;
       display: none;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         font-size: 30px;
         margin: 20px 0 !important;
         display: block;
@@ -615,7 +643,7 @@
       height: 550px;
       border: 7px solid #fff;
       border-radius: 47px;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         width: 300px;
         height: 424px;
       }
@@ -635,13 +663,13 @@
         font-weight: 700;
         font-size: 46px;
         display: block;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           display: none;
         }
       }
       .up {
         display: flex;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           flex-direction: column;
           align-items: center;
         }
@@ -650,7 +678,7 @@
         display: flex;
         margin-left: 14%;
         margin-top: 30px;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           flex-direction: column;
           align-items: center;
           margin-left: 0;
@@ -672,7 +700,7 @@
         flex-direction: column;
         justify-content: space-between;
 
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           width: 100%;
           min-height: 200px;
 
@@ -707,7 +735,7 @@
           letter-spacing: 0.5px;
           margin-top: 15px;
           word-wrap: break-word;
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             font-size: 18px;
           }
         }
@@ -746,7 +774,7 @@
       font-weight: 700;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
       margin-bottom: 20px !important;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         font-size: 38px;
       }
     }
@@ -755,13 +783,13 @@
       align-items: center;
       justify-content: space-around;
       margin-top: 60px;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         flex-direction: column;
         padding: 0 15px;
       }
       .about-left {
         width: 50%;
-        @media (max-width: 576px) {
+       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
           width: 100%;
         }
 
@@ -771,7 +799,7 @@
           text-align: left;
           font-size: 18px;
           font-weight: 700;
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             font-size: 17px;
           }
         }
@@ -784,7 +812,7 @@
           width: 190px;
           height: 190px;
           text-align: center;
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             margin-top: 20px;
           }
           img {
@@ -834,7 +862,7 @@
       color: #fff;
       margin-top: 20px;
       font-weight: 700;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         font-size: 25px;
       }
     }
@@ -842,7 +870,7 @@
       padding: 0 15px;
       width: 90%;
       margin-top: 30px;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         width: 100%;
       }
       .accordion-item {
@@ -854,7 +882,7 @@
           font-size: 18px;
           font-weight: 700;
           color: $darkBlue !important;
-          @media (max-width: 576px) {
+         @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
             font-size: 15px;
           }
           &:not(.collapsed) {
@@ -879,7 +907,7 @@
   .register-flex {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
       flex-direction: column;
     }
 
@@ -896,7 +924,7 @@
 
     .register-form {
       width: 50%;
-      @media (max-width: 576px) {
+     @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         width: 100%;
         margin-top: 20px;
       }
