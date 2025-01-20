@@ -40,6 +40,7 @@ const Header = () => {
               <Link to="/#marathon-section" className="navbar-link" onClick={toggleNavbar}>Marafonlar</Link>
               <Link to="/#about-section" className="navbar-link" onClick={toggleNavbar}>Haqqımızda</Link>
               <Link to="/project-sell" className="navbar-link" onClick={toggleNavbar}>Layihəni sat</Link>
+              <Link to="/Blog" className="navbar-link" onClick={toggleNavbar}>Bloq</Link>
               <Link to="/#registerForm" className="navbar-link" onClick={toggleNavbar}>Müraciət et</Link>
             </div>
           </div>

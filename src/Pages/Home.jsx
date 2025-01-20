@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Header/Header";
 import { Accordion } from "react-bootstrap";
-import Footer from "../Components/Footer/Footer";
+import Footer from "../Components/Footer";
 import hat from "../../public/Images/hat-left.png";
 import girl from "../../public/Images/sumkali-qiz.jpg";
 import studentImg from "../../public/Images/bg-img.png";
@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 import { Link, useLocation } from "react-router-dom";
 import Main from "../Components/Main/Main";
 import emailjs from "emailjs-com";
-import About from "../Components/About/About";
+import About from "../Components/About";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loading from "./Loading";
@@ -241,6 +241,16 @@ const Home = () => {
                     optimallaşdırır.
                   </p>
                 </div>
+                <div className="marathon-card-white">
+                  <h1>SMM</h1>
+                  <p>
+                    Sosial Media Marketinqi (SMM), brendlərin sosial
+                    platformalarda tanıdılması və auditoriya ilə effektiv
+                    ünsiyyət qurmasını təmin edən bir prosesdir. Məqsəd, müştəri
+                    əlaqələrini gücləndirmək və satışları artırmaq üçün maraqlı
+                    və strateji məzmun təqdim etməkdir.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -259,7 +269,7 @@ const Home = () => {
                       {/* <div className="card-img">
                         <img src={hat} alt="" />
                       </div> */}
-                   
+
                       <ul>
                         <li>Real proyektlər üzərində inkişaf</li>
                         <li>Hər həftə online görüş</li>
@@ -292,32 +302,23 @@ const Home = () => {
                       {/* <div className="card-img2">
                         <img src={hat} alt="" />
                       </div> */}
-                    <ul>
-                      <li>Real proyektlər üzərində inkişaf
-</li>
-                      <li>Hər həftə online görüş
-</li>
-                      <li>2 ay tədris müddəti + 40günlük
-       marafona ödənişsiz qatılmaq</li>
-                      <li>Real iş mühitinə hazırlıq
-</li>
-                      <li>A-Z yə roadmap
-</li>
-                      <li>7/24 mentor dəstəyi ilə 
-</li>
-                      <li>Baza biliyi qazanmaq
-    </li>
-                      <li>Görüşlərin videorecordu
-</li>
-                      <li>Portfolio hazırlanması
-</li>
-                      <li>Müsahibəyə hazırlıq
-</li>
-                      <li>Networking qurmaq
-</li>
-                      <li>100% online
-</li>
-                    </ul>
+                      <ul>
+                        <li>Real proyektlər üzərində inkişaf</li>
+                        <li>Hər həftə online görüş</li>
+                        <li>
+                          2 ay tədris müddəti + 40günlük marafona ödənişsiz
+                          qatılmaq
+                        </li>
+                        <li>Real iş mühitinə hazırlıq</li>
+                        <li>A-Z yə roadmap</li>
+                        <li>7/24 mentor dəstəyi ilə</li>
+                        <li>Baza biliyi qazanmaq</li>
+                        <li>Görüşlərin videorecordu</li>
+                        <li>Portfolio hazırlanması</li>
+                        <li>Müsahibəyə hazırlıq</li>
+                        <li>Networking qurmaq</li>
+                        <li>100% online</li>
+                      </ul>
                       <div className="price-flex">
                         <div className="price old-price">
                           <span>Birdəfəlik</span>
@@ -495,7 +496,8 @@ const Home = () => {
                         name="program"
                         value={program}
                         onChange={(e) => setProgram(e.target.value)}
-                        required>
+                        required
+                      >
                         <option value="" disabled>
                           Marafon seçin
                         </option>
@@ -504,7 +506,9 @@ const Home = () => {
                           Frontend Programming
                         </option>
                         <option value="Data analytics">Data analytics</option>
-                        <option value="Backend Programming">Backend Programming</option>
+                        <option value="Backend Programming">
+                          Backend Programming
+                        </option>
                         <option value="Quality Assurance">
                           Quality Assurance
                         </option>
