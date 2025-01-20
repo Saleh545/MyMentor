@@ -6,8 +6,24 @@ import { Fade as Hamburger } from 'hamburger-react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Ekran genişliğini takip eden state
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 991);
+
   useEffect(() => {
-    if (isOpen) {
+    // Ekran genişliği değişimini dinle
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 991);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Scroll kilitleme
+    if (isOpen && isMobile) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
@@ -16,7 +32,7 @@ const Header = () => {
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  }, [isOpen]);
+  }, [isOpen, isMobile]);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
