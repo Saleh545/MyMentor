@@ -5,6 +5,8 @@ import Footer from "../Components/Footer";
 import hat from "../../public/Images/hat-left.png";
 import girl from "../../public/Images/sumkali-qiz.jpg";
 import studentImg from "../../public/Images/bg-img.png";
+import bck2 from "../../public/Images/kilse.jpg";
+import ticket from "../../public/Images/ticket.jpg";
 import Swal from "sweetalert2";
 import { Link, useLocation } from "react-router-dom";
 import Main from "../Components/Main/Main";
@@ -168,7 +170,9 @@ const Home = () => {
 
           <div className="education-section">
             <div className="bck-image">
-              <img src={studentImg} alt="" />
+              {/* <img src={studentImg} alt="" /> */}
+              <img src={bck2} alt="" />
+              <img src={ticket} alt="" />
             </div>
             <div className="education">
               <div className="container">
@@ -512,6 +516,7 @@ const Home = () => {
                         <option value="Quality Assurance">
                           Quality Assurance
                         </option>
+                        <option value="SMM">SMM </option>
                       </select>
                     </div>
                     <div className="form-group">
