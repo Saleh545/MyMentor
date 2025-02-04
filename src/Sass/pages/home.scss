@@ -3,12 +3,14 @@
   .main-menu {
     background-color: $darkBlue !important  ;
     padding: 0 40px;
+    @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
+      padding: 20px 40px;
+    }
     .main-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 100vh;
-      padding-top: 130px;
+      height: 90vh;
       @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
         height: 100vh;
         flex-direction: column;

@@ -6,11 +6,9 @@ import { Fade as Hamburger } from 'hamburger-react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Ekran genişliğini takip eden state
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 991);
 
   useEffect(() => {
-    // Ekran genişliği değişimini dinle
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 991);
     };
@@ -22,7 +20,6 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    // Scroll kilitleme
     if (isOpen && isMobile) {
       document.body.classList.add("no-scroll");
     } else {
@@ -39,8 +36,9 @@ const Header = () => {
   };
 
   return (
+    <header>
         <div className="container">
-      <header>
+
           <div className="header">
             <Link to="/" className="left">
               <div className="left-img"><img src={icon} alt="icon" /></div>
@@ -60,8 +58,9 @@ const Header = () => {
               <Link to="/#registerForm" className="navbar-link" onClick={toggleNavbar}>Müraciət et</Link>
             </div>
           </div>
-      </header>
+          
       </div>
+      </header>
   );
 };
 
