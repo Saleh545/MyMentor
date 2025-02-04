@@ -3,9 +3,7 @@
   .main-menu {
     background-color: $darkBlue !important  ;
     padding: 0 40px;
-    @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
-      padding: 20px 40px;
-    }
+
     .main-content {
       display: flex;
       align-items: center;
@@ -490,20 +488,23 @@
           list-style-position: outside;
           width: 100%;
           padding: 0 20px;
+          @media (max-width: 768px), (max-width: 991px) {
+            padding: 0;
+          }
           li {
             font-size: 18px;
             font-weight: 700;
             color: #fff;
-            margin: 0 0 0 30px; 
+            margin: 0 0 0 30px;
             margin-bottom: 7px !important;
             text-align: left;
-            word-wrap: break-word; 
+            word-wrap: break-word;
             @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
               font-size: 13px;
               padding: 0 5px;
             }
             @media (max-width: 768px), (max-width: 991px) {
-              font-size: 18px;
+              font-size: 14px;
             }
           }
         }
@@ -592,7 +593,7 @@
                 @media (max-width: 576px),
                   (max-width: 768px),
                   (max-width: 991px) {
-                  font-size: 17px;
+                  font-size: 13px;
                 }
               }
 
@@ -603,13 +604,16 @@
                 @media (max-width: 576px),
                   (max-width: 768px),
                   (max-width: 991px) {
-                  font-size: 27px;
+                  font-size: 23px;
                 }
               }
             }
           }
           .price-flex1 {
             margin-top: 104px;
+            @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
+              margin-top: 20px;
+            }
           }
           a {
             border: none;
@@ -623,12 +627,12 @@
             background-color: #fff;
             color: #000000;
             border: solid #fff;
-            &:hover {
-              background: linear-gradient(180deg, #d955d7, #591259);
-              color: #fff;
-            }
+            // &:hover {
+            //   background: linear-gradient(180deg, #d955d7, #591259);
+            //   color: #fff;
+            // }
             @media (max-width: 576px), (max-width: 768px), (max-width: 991px) {
-              font-size: 20px;
+              font-size: 16px;
               padding: 10px 30px;
             }
           }
